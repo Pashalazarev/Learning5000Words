@@ -9,21 +9,34 @@
 /* Begin PBXBuildFile section */
 		FA84157C29D7175F00F5FC39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84157B29D7175F00F5FC39 /* AppDelegate.swift */; };
 		FA84157E29D7175F00F5FC39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84157D29D7175F00F5FC39 /* SceneDelegate.swift */; };
-		FA84158029D7175F00F5FC39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84157F29D7175F00F5FC39 /* ViewController.swift */; };
 		FA84158329D7175F00F5FC39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA84158129D7175F00F5FC39 /* Main.storyboard */; };
 		FA84158529D7176200F5FC39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA84158429D7176200F5FC39 /* Assets.xcassets */; };
 		FA84158829D7176200F5FC39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA84158629D7176200F5FC39 /* LaunchScreen.storyboard */; };
+		FA84159429D718A600F5FC39 /* WordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84159329D718A600F5FC39 /* WordsViewController.swift */; };
+		FA84159629D718E200F5FC39 /* WordsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84159529D718E200F5FC39 /* WordsCell.swift */; };
+		FA84159929D7197100F5FC39 /* WordsSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84159829D7197100F5FC39 /* WordsSettings.swift */; };
+		FA84159C29D719B200F5FC39 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FA84159B29D719B200F5FC39 /* SnapKit */; };
+		FA84159E29D71B1C00F5FC39 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84159D29D71B1C00F5FC39 /* ChallengeViewController.swift */; };
+		FA8415A029D71B3B00F5FC39 /* ChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84159F29D71B3B00F5FC39 /* ChallengeView.swift */; };
+		FA8415A229D71B7E00F5FC39 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8415A129D71B7E00F5FC39 /* Button.swift */; };
+		FA8415A429D71BAC00F5FC39 /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8415A329D71BAC00F5FC39 /* Labels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FA84157829D7175F00F5FC39 /* Learning5000Words.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Learning5000Words.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA84157B29D7175F00F5FC39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA84157D29D7175F00F5FC39 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FA84157F29D7175F00F5FC39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA84158229D7175F00F5FC39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA84158429D7176200F5FC39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA84158729D7176200F5FC39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA84158929D7176200F5FC39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA84159329D718A600F5FC39 /* WordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsViewController.swift; sourceTree = "<group>"; };
+		FA84159529D718E200F5FC39 /* WordsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsCell.swift; sourceTree = "<group>"; };
+		FA84159829D7197100F5FC39 /* WordsSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsSettings.swift; sourceTree = "<group>"; };
+		FA84159D29D71B1C00F5FC39 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
+		FA84159F29D71B3B00F5FC39 /* ChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeView.swift; sourceTree = "<group>"; };
+		FA8415A129D71B7E00F5FC39 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		FA8415A329D71BAC00F5FC39 /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA84159C29D719B200F5FC39 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +70,77 @@
 		FA84157A29D7175F00F5FC39 /* Learning5000Words */ = {
 			isa = PBXGroup;
 			children = (
-				FA84157B29D7175F00F5FC39 /* AppDelegate.swift */,
-				FA84157D29D7175F00F5FC39 /* SceneDelegate.swift */,
-				FA84157F29D7175F00F5FC39 /* ViewController.swift */,
-				FA84158129D7175F00F5FC39 /* Main.storyboard */,
-				FA84158429D7176200F5FC39 /* Assets.xcassets */,
-				FA84158629D7176200F5FC39 /* LaunchScreen.storyboard */,
+				FA8415A529D71BD400F5FC39 /* App */,
+				FA84158F29D7182E00F5FC39 /* Screens */,
+				FA84159729D7193F00F5FC39 /* Service */,
+				FA8415A629D71C1600F5FC39 /* Resources */,
 				FA84158929D7176200F5FC39 /* Info.plist */,
 			);
 			path = Learning5000Words;
+			sourceTree = "<group>";
+		};
+		FA84158F29D7182E00F5FC39 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				FA84159029D7183D00F5FC39 /* Words */,
+				FA84159129D7185600F5FC39 /* Cells */,
+				FA84159229D7186000F5FC39 /* Challenge */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		FA84159029D7183D00F5FC39 /* Words */ = {
+			isa = PBXGroup;
+			children = (
+				FA84159329D718A600F5FC39 /* WordsViewController.swift */,
+			);
+			path = Words;
+			sourceTree = "<group>";
+		};
+		FA84159129D7185600F5FC39 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FA84159529D718E200F5FC39 /* WordsCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FA84159229D7186000F5FC39 /* Challenge */ = {
+			isa = PBXGroup;
+			children = (
+				FA84159D29D71B1C00F5FC39 /* ChallengeViewController.swift */,
+				FA84159F29D71B3B00F5FC39 /* ChallengeView.swift */,
+				FA8415A129D71B7E00F5FC39 /* Button.swift */,
+				FA8415A329D71BAC00F5FC39 /* Labels.swift */,
+			);
+			path = Challenge;
+			sourceTree = "<group>";
+		};
+		FA84159729D7193F00F5FC39 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FA84159829D7197100F5FC39 /* WordsSettings.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		FA8415A529D71BD400F5FC39 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FA84157B29D7175F00F5FC39 /* AppDelegate.swift */,
+				FA84157D29D7175F00F5FC39 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FA8415A629D71C1600F5FC39 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FA84158129D7175F00F5FC39 /* Main.storyboard */,
+				FA84158429D7176200F5FC39 /* Assets.xcassets */,
+				FA84158629D7176200F5FC39 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +159,9 @@
 			dependencies = (
 			);
 			name = Learning5000Words;
+			packageProductDependencies = (
+				FA84159B29D719B200F5FC39 /* SnapKit */,
+			);
 			productName = Learning5000Words;
 			productReference = FA84157829D7175F00F5FC39 /* Learning5000Words.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +190,9 @@
 				Base,
 			);
 			mainGroup = FA84156F29D7175F00F5FC39;
+			packageReferences = (
+				FA84159A29D719B200F5FC39 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = FA84157929D7175F00F5FC39 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +220,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA84158029D7175F00F5FC39 /* ViewController.swift in Sources */,
+				FA84159929D7197100F5FC39 /* WordsSettings.swift in Sources */,
 				FA84157C29D7175F00F5FC39 /* AppDelegate.swift in Sources */,
+				FA84159629D718E200F5FC39 /* WordsCell.swift in Sources */,
+				FA8415A029D71B3B00F5FC39 /* ChallengeView.swift in Sources */,
+				FA84159E29D71B1C00F5FC39 /* ChallengeViewController.swift in Sources */,
+				FA8415A429D71BAC00F5FC39 /* Labels.swift in Sources */,
+				FA84159429D718A600F5FC39 /* WordsViewController.swift in Sources */,
+				FA8415A229D71B7E00F5FC39 /* Button.swift in Sources */,
 				FA84157E29D7175F00F5FC39 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,6 +448,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA84159A29D719B200F5FC39 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA84159B29D719B200F5FC39 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA84159A29D719B200F5FC39 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FA84157029D7175F00F5FC39 /* Project object */;
 }
