@@ -40,4 +40,15 @@ final class Button: UIButton {
         
         return button
     }()
+    
+    static let nextStepButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = .systemBlue
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 20)
+        button.layer.cornerRadius = 20
+    
+        return button
+    }()
 }

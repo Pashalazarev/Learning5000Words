@@ -39,6 +39,15 @@ class Labels: UILabel {
         
         return label
     }()
-
-
+    
+    static let notificationLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .black
+        label.text = "Правильно!"
+        
+        return label
+    }()
+    
+    
 }

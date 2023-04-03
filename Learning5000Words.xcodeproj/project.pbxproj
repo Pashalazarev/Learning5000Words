@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA5E2DD429DAED0A0061817A /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E2DD329DAED0A0061817A /* ProgressView.swift */; };
+		FA5E2DD729DAF29B0061817A /* CorrectAnswerWiewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E2DD629DAF29B0061817A /* CorrectAnswerWiewController.swift */; };
+		FA5E2DD929DAF49B0061817A /* CorrectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E2DD829DAF49B0061817A /* CorrectView.swift */; };
 		FA84157C29D7175F00F5FC39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84157B29D7175F00F5FC39 /* AppDelegate.swift */; };
 		FA84157E29D7175F00F5FC39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84157D29D7175F00F5FC39 /* SceneDelegate.swift */; };
 		FA84158329D7175F00F5FC39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA84158129D7175F00F5FC39 /* Main.storyboard */; };
@@ -23,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA5E2DD329DAED0A0061817A /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		FA5E2DD629DAF29B0061817A /* CorrectAnswerWiewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectAnswerWiewController.swift; sourceTree = "<group>"; };
+		FA5E2DD829DAF49B0061817A /* CorrectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectView.swift; sourceTree = "<group>"; };
 		FA84157829D7175F00F5FC39 /* Learning5000Words.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Learning5000Words.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA84157B29D7175F00F5FC39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA84157D29D7175F00F5FC39 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +57,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA5E2DD529DAF2270061817A /* Answers */ = {
+			isa = PBXGroup;
+			children = (
+				FA5E2DD629DAF29B0061817A /* CorrectAnswerWiewController.swift */,
+				FA5E2DD829DAF49B0061817A /* CorrectView.swift */,
+			);
+			path = Answers;
+			sourceTree = "<group>";
+		};
 		FA84156F29D7175F00F5FC39 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +100,7 @@
 				FA84159029D7183D00F5FC39 /* Words */,
 				FA84159129D7185600F5FC39 /* Cells */,
 				FA84159229D7186000F5FC39 /* Challenge */,
+				FA5E2DD529DAF2270061817A /* Answers */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -112,6 +128,7 @@
 				FA84159F29D71B3B00F5FC39 /* ChallengeView.swift */,
 				FA8415A129D71B7E00F5FC39 /* Button.swift */,
 				FA8415A329D71BAC00F5FC39 /* Labels.swift */,
+				FA5E2DD329DAED0A0061817A /* ProgressView.swift */,
 			);
 			path = Challenge;
 			sourceTree = "<group>";
@@ -225,10 +242,13 @@
 				FA84159629D718E200F5FC39 /* WordsCell.swift in Sources */,
 				FA8415A029D71B3B00F5FC39 /* ChallengeView.swift in Sources */,
 				FA84159E29D71B1C00F5FC39 /* ChallengeViewController.swift in Sources */,
+				FA5E2DD929DAF49B0061817A /* CorrectView.swift in Sources */,
 				FA8415A429D71BAC00F5FC39 /* Labels.swift in Sources */,
 				FA84159429D718A600F5FC39 /* WordsViewController.swift in Sources */,
+				FA5E2DD729DAF29B0061817A /* CorrectAnswerWiewController.swift in Sources */,
 				FA8415A229D71B7E00F5FC39 /* Button.swift in Sources */,
 				FA84157E29D7175F00F5FC39 /* SceneDelegate.swift in Sources */,
+				FA5E2DD429DAED0A0061817A /* ProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

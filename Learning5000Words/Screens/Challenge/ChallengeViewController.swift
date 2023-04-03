@@ -41,16 +41,6 @@ final class ChallengeViewController: UIViewController {
         
         return view
     }()
-    
-    private let progressView: UIProgressView = {
-        let progressView = UIProgressView()
-        progressView.translatesAutoresizingMaskIntoConstraints = false
-        progressView.transform = progressView.transform.scaledBy(x: 0.5, y: 2)
-        progressView.layer.cornerRadius = 2
-        progressView.progress = 0.5
-        
-        return progressView
-    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,7 +52,9 @@ final class ChallengeViewController: UIViewController {
         view.backgroundColor = .white
         view.addSubview(challengeVertivalStackView)
         
-        var elements = [progressView, topEmptyView, Labels.headerLabel, challengeView, lowerEmptyView]
+        var elements = [ProgressView.progressView, topEmptyView, Labels.headerLabel,
+                        challengeView, lowerEmptyView
+        ]
        
         var buttons = [UIButton]()
         for index in 1...4 {

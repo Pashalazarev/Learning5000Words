@@ -42,16 +42,16 @@ class WordsCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .darkGray.withAlphaComponent(0.3)
         label.numberOfLines = 2
-        label.font = UIFont.boldSystemFont(ofSize: 12)
+        label.font = UIFont.boldSystemFont(ofSize: 13)
         return label
     }()
     
     private let soundButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage.init(systemName: "speaker.wave.2"), for: .normal)
+        button.setImage(UIImage.init(systemName: "speaker.wave.2.fill"), for: .normal)
         button.layer.cornerRadius = 20
-        button.setTitleColor(.blue, for: .normal)
+        button.tintColor = .black
         button.backgroundColor = .systemGray.withAlphaComponent(0.1)
         button.widthAnchor.constraint(equalToConstant: 40).isActive = true
         button.heightAnchor.constraint(equalToConstant: 40).isActive = true
@@ -96,7 +96,4 @@ class WordsCell: UITableViewCell {
         nameLabel.text = word.name
         descriptionLabel.text = word.description
     }
-        
-        
-        
-    }
+}
