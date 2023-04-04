@@ -45,6 +45,7 @@ class Labels: UILabel {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
         label.text = "Правильно!"
+        label.textAlignment = .center
         
         return label
     }()

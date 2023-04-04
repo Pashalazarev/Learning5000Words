@@ -20,8 +20,6 @@ final class CorrectView: UIView {
         return stackView
     }()
     
-    let containerView: UIView
-    
     let wordImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -38,6 +36,7 @@ final class CorrectView: UIView {
         label.textColor = .black
         label.font = UIFont.boldSystemFont(ofSize: 25)
         label.text = "Перевод слова"
+        label.layer.shadowOpacity = 0
         
         return label
     }()
@@ -69,7 +68,7 @@ final class CorrectView: UIView {
          self.layer.shadowColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.5).cgColor
          self.layer.shadowOffset = CGSize(width: 0, height: 3)
          self.layer.shadowOpacity = 1
-         
+
          self.addSubview(verticalStackView)
          self.addSubview(descriptionLabel)
          

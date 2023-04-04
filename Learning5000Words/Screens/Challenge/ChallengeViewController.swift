@@ -27,21 +27,6 @@ final class ChallengeViewController: UIViewController {
         return stackView
     }()
 
-    private let topEmptyView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        return view
-    }()
-    
-    private let lowerEmptyView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        
-        return view
-    }()
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
@@ -52,8 +37,8 @@ final class ChallengeViewController: UIViewController {
         view.backgroundColor = .white
         view.addSubview(challengeVertivalStackView)
         
-        var elements = [ProgressView.progressView, topEmptyView, Labels.headerLabel,
-                        challengeView, lowerEmptyView
+        var elements = [ProgressView.progressView, EmptyView.topEmptyView, Labels.headerLabel,
+                        challengeView, EmptyView.lowerEmptyView
         ]
        
         var buttons = [UIButton]()

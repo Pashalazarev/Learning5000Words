@@ -47,7 +47,9 @@ final class Button: UIButton {
         button.backgroundColor = .systemBlue
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 20)
-        button.layer.cornerRadius = 20
+        button.layer.cornerRadius = 15
+        button.heightAnchor.constraint(equalToConstant: 53).isActive = true
+        button.setTitle("Далее", for: .normal)
     
         return button
     }()

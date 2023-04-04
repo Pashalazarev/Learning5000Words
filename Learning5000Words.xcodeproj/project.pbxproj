@@ -18,12 +18,26 @@
 		FA84159429D718A600F5FC39 /* WordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84159329D718A600F5FC39 /* WordsViewController.swift */; };
 		FA84159629D718E200F5FC39 /* WordsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84159529D718E200F5FC39 /* WordsCell.swift */; };
 		FA84159929D7197100F5FC39 /* WordsSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84159829D7197100F5FC39 /* WordsSettings.swift */; };
-		FA84159C29D719B200F5FC39 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FA84159B29D719B200F5FC39 /* SnapKit */; };
 		FA84159E29D71B1C00F5FC39 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84159D29D71B1C00F5FC39 /* ChallengeViewController.swift */; };
 		FA8415A029D71B3B00F5FC39 /* ChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84159F29D71B3B00F5FC39 /* ChallengeView.swift */; };
 		FA8415A229D71B7E00F5FC39 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8415A129D71B7E00F5FC39 /* Button.swift */; };
 		FA8415A429D71BAC00F5FC39 /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8415A329D71BAC00F5FC39 /* Labels.swift */; };
+		FA8A163929DC565F00AEE462 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FA8A163829DC565F00AEE462 /* SnapKit */; };
+		FA8A164029DC963100AEE462 /* EmptyViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A163F29DC963100AEE462 /* EmptyViews.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FA8A163E29DC571C00AEE462 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FA5E2DD329DAED0A0061817A /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
@@ -43,6 +57,7 @@
 		FA84159F29D71B3B00F5FC39 /* ChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeView.swift; sourceTree = "<group>"; };
 		FA8415A129D71B7E00F5FC39 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		FA8415A329D71BAC00F5FC39 /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
+		FA8A163F29DC963100AEE462 /* EmptyViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA84159C29D719B200F5FC39 /* SnapKit in Frameworks */,
+				FA8A163929DC565F00AEE462 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +144,7 @@
 				FA8415A129D71B7E00F5FC39 /* Button.swift */,
 				FA8415A329D71BAC00F5FC39 /* Labels.swift */,
 				FA5E2DD329DAED0A0061817A /* ProgressView.swift */,
+				FA8A163F29DC963100AEE462 /* EmptyViews.swift */,
 			);
 			path = Challenge;
 			sourceTree = "<group>";
@@ -170,6 +186,7 @@
 				FA84157429D7175F00F5FC39 /* Sources */,
 				FA84157529D7175F00F5FC39 /* Frameworks */,
 				FA84157629D7175F00F5FC39 /* Resources */,
+				FA8A163E29DC571C00AEE462 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -177,7 +194,7 @@
 			);
 			name = Learning5000Words;
 			packageProductDependencies = (
-				FA84159B29D719B200F5FC39 /* SnapKit */,
+				FA8A163829DC565F00AEE462 /* SnapKit */,
 			);
 			productName = Learning5000Words;
 			productReference = FA84157829D7175F00F5FC39 /* Learning5000Words.app */;
@@ -208,7 +225,7 @@
 			);
 			mainGroup = FA84156F29D7175F00F5FC39;
 			packageReferences = (
-				FA84159A29D719B200F5FC39 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				FA8A163729DC565F00AEE462 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = FA84157929D7175F00F5FC39 /* Products */;
 			projectDirPath = "";
@@ -239,6 +256,7 @@
 			files = (
 				FA84159929D7197100F5FC39 /* WordsSettings.swift in Sources */,
 				FA84157C29D7175F00F5FC39 /* AppDelegate.swift in Sources */,
+				FA8A164029DC963100AEE462 /* EmptyViews.swift in Sources */,
 				FA84159629D718E200F5FC39 /* WordsCell.swift in Sources */,
 				FA8415A029D71B3B00F5FC39 /* ChallengeView.swift in Sources */,
 				FA84159E29D71B1C00F5FC39 /* ChallengeViewController.swift in Sources */,
@@ -470,7 +488,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		FA84159A29D719B200F5FC39 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		FA8A163729DC565F00AEE462 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
@@ -481,9 +499,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		FA84159B29D719B200F5FC39 /* SnapKit */ = {
+		FA8A163829DC565F00AEE462 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FA84159A29D719B200F5FC39 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = FA8A163729DC565F00AEE462 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */

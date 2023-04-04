@@ -6,14 +6,13 @@
 //
 
 import UIKit
-
+import SnapKit
 
 final class CorrectAnswerWiewController: UIViewController {
 
    private let correctView: CorrectView = {
         let view = CorrectView()
-        view.heightAnchor.constraint(equalToConstant: 600).isActive = true
-        
+       
         return view
     }()
     
@@ -22,8 +21,6 @@ final class CorrectAnswerWiewController: UIViewController {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         stackView.spacing = 10
-        stackView.alignment = .center
-//        stackView.backgroundColor = .blue.withAlphaComponent(0.3)
         
         return stackView
     }()
@@ -34,31 +31,36 @@ final class CorrectAnswerWiewController: UIViewController {
         setupConstraints()
     }
     
-    
     private func setupViews() {
         view.backgroundColor = .white
         view.addSubview(correctVerticalStackView)
+        view.addSubview(Button.nextStepButton)
         
-        let elements = [ProgressView.progressView, Labels.notificationLabel,
-                        correctView, Button.nextStepButton
-        ]
-        
+        let elements = [ProgressView.progressView, Labels.notificationLabel,correctView]
         elements.forEach { element in
-            correctVerticalStackView.addSubview(element)
+            correctVerticalStackView.addArrangedSubview(element)
         }
     }
     
     private func setupConstraints() {
-        correctVerticalStackView.snp.makeConstraints { make in // может быть надо добавить bottom
-            make.top.equalTo(view).inset(50)
+        correctVerticalStackView.snp.makeConstraints { make in
+            make.top.equalTo(view).inset(90)
             make.left.right.equalTo(view).inset(20)
+            make.bottom.equalTo(view).inset(140)
         }
         
         correctView.snp.makeConstraints { make in
-            make.top.equalTo(correctVerticalStackView).inset(70)
-            make.bottom.equalTo(correctVerticalStackView).inset(40)
-            make.left.right.equalTo(correctVerticalStackView).inset(10)
+            make.top.equalTo(correctVerticalStackView).inset(90)
+            make.left.right.equalTo(correctVerticalStackView)
+        }
+        
+        Button.nextStepButton.snp.makeConstraints { make in
+            make.bottom.equalTo(correctView).inset(-90)
+            make.left.right.equalTo(correctView)
+        }
+        
+        ProgressView.progressView.snp.makeConstraints { make in
+            make.top.equalTo(correctVerticalStackView).inset(20)
         }
     }
-    
 }

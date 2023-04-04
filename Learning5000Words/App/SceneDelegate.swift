@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow.init(windowScene: windowScene)
-        window?.rootViewController = CorrectAnswerWiewController()
+        window?.rootViewController = ChallengeViewController()
         
         window?.makeKeyAndVisible()
     }
@@ -38,4 +38,3 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
     }
 }
-
