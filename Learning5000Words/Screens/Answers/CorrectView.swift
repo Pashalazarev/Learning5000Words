@@ -20,37 +20,17 @@ final class CorrectView: UIView {
         return stackView
     }()
     
-    let wordImageView: UIImageView = {
+   private let wordImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.layer.shadowOpacity = 0
         image.heightAnchor.constraint(equalToConstant: 150).isActive = true
         image.widthAnchor.constraint(equalToConstant: 230).isActive = true
-        image.image = UIImage(named: "pic for correct answer")
+        image.image = UIImage(named: "pic for answer")
         
         return image
     }()
     
-    let translationLabel: UILabel = {
-       let label = UILabel()
-        label.textColor = .black
-        label.font = UIFont.boldSystemFont(ofSize: 25)
-        label.text = "Перевод слова"
-        label.layer.shadowOpacity = 0
-        
-        return label
-    }()
-    
-    let descriptionLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 15)
-        label.numberOfLines = 2
-        label.text = "Тут будет подробное описание слова которое надо описать"
-        
-       return label
-    }()
-    // текст англ.слова не должен быть жирным
     override init(frame: CGRect) {
         super .init(frame: frame)
         setupViews()
@@ -70,9 +50,9 @@ final class CorrectView: UIView {
          self.layer.shadowOpacity = 1
 
          self.addSubview(verticalStackView)
-         self.addSubview(descriptionLabel)
+         self.addSubview(Labels.descriptionLabel)
          
-         let elements = [wordImageView, Button.soundButton, translationLabel,
+         let elements = [wordImageView, Button.soundButton, Labels.translationLabel,
                          Labels.transcriptionLabel, Labels.wordLabel
          ]
          
@@ -87,10 +67,8 @@ final class CorrectView: UIView {
             make.left.right.equalTo(self).inset(40)
             make.top.equalTo(self).inset(40)
         }
-        descriptionLabel.snp.makeConstraints { make in
+        Labels.descriptionLabel.snp.makeConstraints { make in
             make.left.right.bottom.equalTo(self).inset(10)
         }
    }
 }
-// MARK:  - вопросы
-// почему тень у элементов во вью?
