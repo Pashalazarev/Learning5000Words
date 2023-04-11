@@ -13,7 +13,6 @@ final class ChallengeViewController: UIViewController {
    private let challengeView: ChallengeView = {
         let view = ChallengeView()
         view.heightAnchor.constraint(equalToConstant: 250).isActive = true
-        
         return view
     }()
     
@@ -23,7 +22,6 @@ final class ChallengeViewController: UIViewController {
         stackView.axis = .vertical
         stackView.spacing = 15
         stackView.layer.cornerRadius = 10
-        
         return stackView
     }()
 

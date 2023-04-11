@@ -17,7 +17,6 @@ class Labels: UILabel {
         label.textColor = .black
         label.font = UIFont.boldSystemFont(ofSize: 30)
         label.text = "pretty"
-        
         return label
     }()
     
@@ -27,7 +26,6 @@ class Labels: UILabel {
         label.font = UIFont.systemFont(ofSize: 15)
         label.numberOfLines = 2
         label.text = "Тут будет подробное описание слова которое надо описать"
-        
        return label
     }()
     
@@ -36,12 +34,12 @@ class Labels: UILabel {
         label.textColor = .black
         label.font = UIFont.boldSystemFont(ofSize: 25)
         label.text = "Перевод слова"
-        label.layer.shadowOpacity = 0
-        
         return label
     }()
     
-// MARK: Labels for CorrectAnswer VC
+    //MARK: - Labels for Custom Cells
+    
+// MARK: - Labels for CorrectAnswer VC
     
     static let headerLabel: UILabel = {
         let label = UILabel()
@@ -49,7 +47,6 @@ class Labels: UILabel {
         label.textAlignment = .center
         label.text = "Выбери правильный ответ"
         label.font = UIFont.boldSystemFont(ofSize: 15)
-        
         return label
     }()
     static let transcriptionLabel: UILabel = {
@@ -59,7 +56,6 @@ class Labels: UILabel {
         label.font = UIFont.boldSystemFont(ofSize: 20)
         label.text = "[ˈprɪti]"
         label.textAlignment = .center
-        
         return label
     }()
     
@@ -69,11 +65,10 @@ class Labels: UILabel {
         label.textColor = .black
         label.text = "Правильно!"
         label.textAlignment = .center
-        
         return label
     }()
     
-// MARK: Labels for IncorrectAnswer VC
+// MARK: - Labels for IncorrectAnswer VC
     
     static let incorrectNotificationLabel: UILabel = {
         let label = UILabel()
@@ -82,8 +77,6 @@ class Labels: UILabel {
         label.text = "Не правильный ответ. Необходимо повторить"
         label.textAlignment = .center
         label.numberOfLines = 2
-        
        return label
     }()
-    
 }

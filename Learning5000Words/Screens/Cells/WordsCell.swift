@@ -19,10 +19,11 @@ class WordsCell: UITableViewCell {
         view.layer.borderColor = UIColor.gray.withAlphaComponent(0.5).cgColor
         view.layer.borderWidth = 0.5
         view.layer.cornerRadius = 20
+        view.backgroundColor = .blue.withAlphaComponent(0.1)
         return view
     }()
     
-    private let wordsVerticalStackView: UIStackView = {
+    private let verticalStackView: UIStackView = {
         let stackView = UIStackView.init()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
@@ -72,10 +73,10 @@ class WordsCell: UITableViewCell {
         contentView.addSubview(containerView)
         containerView.addSubview(soundButton)
         
-        containerView.addSubview(wordsVerticalStackView)
+        containerView.addSubview(verticalStackView)
         
-        wordsVerticalStackView.addArrangedSubview(nameLabel)
-        wordsVerticalStackView.addArrangedSubview(descriptionLabel)
+        verticalStackView.addArrangedSubview(nameLabel)
+        verticalStackView.addArrangedSubview(descriptionLabel)
     }
     
     private func setupConstraints() {
@@ -86,7 +87,7 @@ class WordsCell: UITableViewCell {
             make.left.equalTo(containerView.snp.left).offset(8)
             make.centerY.equalTo(containerView.snp.centerY)
         }
-        wordsVerticalStackView.snp.makeConstraints { make in
+        verticalStackView.snp.makeConstraints { make in
             make.top.right.bottom.equalTo(containerView).inset(8)
             make.left.equalTo(soundButton.snp.right).offset(8)
         }

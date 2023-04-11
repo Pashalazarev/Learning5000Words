@@ -36,7 +36,14 @@ class TabBarController: UITabBarController {
         return controller
     }()
     
-    // TODO: сделать таб бар для 3х экранов (incorrectAnswerVC, экраны где лежат выученные слова и и нет)
+    private let incorrectAnswerVC: IncorrectAnswerViewController = {
+        let controller = IncorrectAnswerViewController()
+        let image = UIImage(systemName: "hand.thumbsdown")
+        let selectedImage = UIImage(systemName: "hand.thumbsdown.fill")
+        let tabIten = UITabBarItem.init(title: "Ответил не верно", image: image, selectedImage: selectedImage)
+        return controller
+    }()
+    // TODO: сделать таб бар для 3х экранов (, экраны где лежат выученные слова и и нет)
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		FA187DDA29E46AB200D024E7 /* IncorrectAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA187DD929E46AB200D024E7 /* IncorrectAnswerViewController.swift */; };
 		FA187DDC29E46B4A00D024E7 /* IncorrectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA187DDB29E46B4A00D024E7 /* IncorrectView.swift */; };
+		FA187DDF29E58A9800D024E7 /* LearnedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA187DDE29E58A9800D024E7 /* LearnedViewController.swift */; };
+		FA187DE129E58ADD00D024E7 /* NotLearnedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA187DE029E58ADD00D024E7 /* NotLearnedViewController.swift */; };
+		FA187DE529E5980200D024E7 /* LearnedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA187DE429E5980200D024E7 /* LearnedCell.swift */; };
+		FA187DE729E5984300D024E7 /* NotLearnedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA187DE629E5984300D024E7 /* NotLearnedCell.swift */; };
 		FA5E2DD429DAED0A0061817A /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E2DD329DAED0A0061817A /* ProgressView.swift */; };
 		FA5E2DD729DAF29B0061817A /* CorrectAnswerWiewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E2DD629DAF29B0061817A /* CorrectAnswerWiewController.swift */; };
 		FA5E2DD929DAF49B0061817A /* CorrectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E2DD829DAF49B0061817A /* CorrectView.swift */; };
@@ -45,6 +49,10 @@
 /* Begin PBXFileReference section */
 		FA187DD929E46AB200D024E7 /* IncorrectAnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncorrectAnswerViewController.swift; sourceTree = "<group>"; };
 		FA187DDB29E46B4A00D024E7 /* IncorrectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncorrectView.swift; sourceTree = "<group>"; };
+		FA187DDE29E58A9800D024E7 /* LearnedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnedViewController.swift; sourceTree = "<group>"; };
+		FA187DE029E58ADD00D024E7 /* NotLearnedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotLearnedViewController.swift; sourceTree = "<group>"; };
+		FA187DE429E5980200D024E7 /* LearnedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnedCell.swift; sourceTree = "<group>"; };
+		FA187DE629E5984300D024E7 /* NotLearnedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotLearnedCell.swift; sourceTree = "<group>"; };
 		FA5E2DD329DAED0A0061817A /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		FA5E2DD629DAF29B0061817A /* CorrectAnswerWiewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectAnswerWiewController.swift; sourceTree = "<group>"; };
 		FA5E2DD829DAF49B0061817A /* CorrectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectView.swift; sourceTree = "<group>"; };
@@ -78,6 +86,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA187DDD29E5884100D024E7 /* WordList */ = {
+			isa = PBXGroup;
+			children = (
+				FA187DDE29E58A9800D024E7 /* LearnedViewController.swift */,
+				FA187DE029E58ADD00D024E7 /* NotLearnedViewController.swift */,
+			);
+			name = WordList;
+			sourceTree = "<group>";
+		};
 		FA5E2DD529DAF2270061817A /* Answers */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +142,7 @@
 				FA84159129D7185600F5FC39 /* Cells */,
 				FA84159229D7186000F5FC39 /* Challenge */,
 				FA5E2DD529DAF2270061817A /* Answers */,
+				FA187DDD29E5884100D024E7 /* WordList */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -141,6 +159,8 @@
 			isa = PBXGroup;
 			children = (
 				FA84159529D718E200F5FC39 /* WordsCell.swift */,
+				FA187DE429E5980200D024E7 /* LearnedCell.swift */,
+				FA187DE629E5984300D024E7 /* NotLearnedCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -271,9 +291,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA187DE129E58ADD00D024E7 /* NotLearnedViewController.swift in Sources */,
 				FA84159929D7197100F5FC39 /* WordsSettings.swift in Sources */,
 				FA84157C29D7175F00F5FC39 /* AppDelegate.swift in Sources */,
 				FA187DDC29E46B4A00D024E7 /* IncorrectView.swift in Sources */,
+				FA187DE529E5980200D024E7 /* LearnedCell.swift in Sources */,
 				FA8A164029DC963100AEE462 /* EmptyViews.swift in Sources */,
 				FA84159629D718E200F5FC39 /* WordsCell.swift in Sources */,
 				FA8415A029D71B3B00F5FC39 /* ChallengeView.swift in Sources */,
@@ -285,8 +307,10 @@
 				FA8415A229D71B7E00F5FC39 /* Button.swift in Sources */,
 				FAF3A13F29DEC40A007DE770 /* TabBarController.swift in Sources */,
 				FA84157E29D7175F00F5FC39 /* SceneDelegate.swift in Sources */,
+				FA187DDF29E58A9800D024E7 /* LearnedViewController.swift in Sources */,
 				FA187DDA29E46AB200D024E7 /* IncorrectAnswerViewController.swift in Sources */,
 				FA5E2DD429DAED0A0061817A /* ProgressView.swift in Sources */,
+				FA187DE729E5984300D024E7 /* NotLearnedCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

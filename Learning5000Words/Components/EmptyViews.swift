@@ -5,7 +5,6 @@
 //  Created by Pavel Lazarev Macbook on 04.04.2023.
 //
 
-import Foundation
 import UIKit
 
 final class EmptyView: UIView {
@@ -14,7 +13,6 @@ final class EmptyView: UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        
         return view
     }()
     
@@ -22,7 +20,6 @@ final class EmptyView: UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        
         return view
     }()
 }
