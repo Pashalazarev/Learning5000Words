@@ -15,7 +15,7 @@ struct Words {
 }
 
 let studiedWords: [Words] = [
-    Words(name: "arouse", description: "An ability to influence the audience and to arouse the masses", transcription: "[əˈraʊz]", translation: "Пробуждать"),
+    Words(name: "arouse", description: "An ability to influence the audience and to arouse the masses", transcription: "[əˈraʊz]", translation: "пробуждать"),
     Words(name: "pretty", description: "He looked pretty fit for his age", transcription: "[ˈprɪti]", translation: "симпатичный, хорошенький"),
     Words(name: "grand", description: "The dinner party was very grand", transcription: "[ɡrænd]", translation: "великий, большой"),
     Words(name: "volume", description: "The sewer could not cope with the volume of rainwat", transcription: "[ˈvɑːljuːm]", translation: "объем, громкость"),

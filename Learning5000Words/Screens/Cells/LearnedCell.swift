@@ -15,37 +15,33 @@ class LearnedCell: UITableViewCell {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
-        stackView.alignment = .center // не вакт что надо, так как элементы в стеке можно расставить сверху и снизу! Надо проверить
-        
+        stackView.alignment = .leading
+        stackView.spacing = 5
         return stackView
     }()
     
     private let worldLabel: UILabel = { // может быть сделать 1 свойство для лейбла во всех ячейках
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.boldSystemFont(ofSize: 20)
+        label.font = UIFont.boldSystemFont(ofSize: 15)
         label.textColor = .systemBlue.withAlphaComponent(0.6)
-        
         return label
     }()
     
     private let translationLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.boldSystemFont(ofSize: 15)
+        label.font = UIFont.systemFont(ofSize: 13)
         label.textColor = .black
-        
         return label
     }()
     
     private let wordImage: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.heightAnchor.constraint(equalToConstant: 25).isActive = false
-        image.widthAnchor.constraint(equalToConstant: 25).isActive = false
-        image.layer.cornerRadius = image.frame.width / 2
-        image.clipsToBounds = true // проверить как отображается картинка
-        
+        image.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        image.widthAnchor.constraint(equalToConstant: 30).isActive = true
+        image.image = UIImage(named: "pic for answer")
         return image
     }()
     
@@ -64,17 +60,26 @@ class LearnedCell: UITableViewCell {
     // MARK: - может быть тут тоже нужен?
     private func setupViews() {
         contentView.addSubview(verticalSTackView)
+        contentView.addSubview(wordImage)
         verticalSTackView.addArrangedSubview(worldLabel)
         verticalSTackView.addArrangedSubview(translationLabel)
-        // доделать
+        
     }
     
     private func setupConstraints() {
-        // доделать
+        wordImage.snp.makeConstraints { make in
+            make.left.equalTo(contentView.snp.left).inset(16)
+            make.top.bottom.equalTo(contentView).inset(8)
+        }
+        verticalSTackView.snp.makeConstraints { make in
+            make.left.equalTo(wordImage.snp.right).offset(8)
+            make.top.bottom.equalTo(contentView)
+        }
     }
 
     func update(_ word: Words) {
         worldLabel.text = word.name
         translationLabel.text = word.translation
+
     }
 }

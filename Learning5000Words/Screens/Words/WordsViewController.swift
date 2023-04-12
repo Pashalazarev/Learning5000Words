@@ -16,7 +16,6 @@ final class WordsViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(WordsCell.self, forCellReuseIdentifier: WordsCell.reuseID)
-
         return tableView
     }()
     

@@ -16,6 +16,7 @@ final class LearnedViewController: UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(LearnedCell.self, forCellReuseIdentifier: LearnedCell.reuseId)
         return tableView
     }()
     
@@ -49,8 +50,13 @@ extension LearnedViewController : UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
         let learnedList = studiedWords[indexPath.row]
+        cell.update(learnedList)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }
