@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA187DDA29E46AB200D024E7 /* IncorrectAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA187DD929E46AB200D024E7 /* IncorrectAnswerViewController.swift */; };
+		FA187DDC29E46B4A00D024E7 /* IncorrectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA187DDB29E46B4A00D024E7 /* IncorrectView.swift */; };
+		FA187DDF29E58A9800D024E7 /* LearnedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA187DDE29E58A9800D024E7 /* LearnedViewController.swift */; };
+		FA187DE129E58ADD00D024E7 /* NotLearnedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA187DE029E58ADD00D024E7 /* NotLearnedViewController.swift */; };
+		FA187DE529E5980200D024E7 /* LearnedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA187DE429E5980200D024E7 /* LearnedCell.swift */; };
+		FA187DE729E5984300D024E7 /* NotLearnedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA187DE629E5984300D024E7 /* NotLearnedCell.swift */; };
+		FA5E2DD429DAED0A0061817A /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E2DD329DAED0A0061817A /* ProgressView.swift */; };
+		FA5E2DD729DAF29B0061817A /* CorrectAnswerWiewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E2DD629DAF29B0061817A /* CorrectAnswerWiewController.swift */; };
+		FA5E2DD929DAF49B0061817A /* CorrectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E2DD829DAF49B0061817A /* CorrectView.swift */; };
 		FA84157C29D7175F00F5FC39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84157B29D7175F00F5FC39 /* AppDelegate.swift */; };
 		FA84157E29D7175F00F5FC39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84157D29D7175F00F5FC39 /* SceneDelegate.swift */; };
 		FA84158329D7175F00F5FC39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA84158129D7175F00F5FC39 /* Main.storyboard */; };
@@ -15,14 +24,38 @@
 		FA84159429D718A600F5FC39 /* WordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84159329D718A600F5FC39 /* WordsViewController.swift */; };
 		FA84159629D718E200F5FC39 /* WordsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84159529D718E200F5FC39 /* WordsCell.swift */; };
 		FA84159929D7197100F5FC39 /* WordsSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84159829D7197100F5FC39 /* WordsSettings.swift */; };
-		FA84159C29D719B200F5FC39 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FA84159B29D719B200F5FC39 /* SnapKit */; };
 		FA84159E29D71B1C00F5FC39 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84159D29D71B1C00F5FC39 /* ChallengeViewController.swift */; };
 		FA8415A029D71B3B00F5FC39 /* ChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84159F29D71B3B00F5FC39 /* ChallengeView.swift */; };
 		FA8415A229D71B7E00F5FC39 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8415A129D71B7E00F5FC39 /* Button.swift */; };
 		FA8415A429D71BAC00F5FC39 /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8415A329D71BAC00F5FC39 /* Labels.swift */; };
+		FA8A163929DC565F00AEE462 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FA8A163829DC565F00AEE462 /* SnapKit */; };
+		FA8A164029DC963100AEE462 /* EmptyViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A163F29DC963100AEE462 /* EmptyViews.swift */; };
+		FAF3A13F29DEC40A007DE770 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF3A13E29DEC40A007DE770 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FA8A163E29DC571C00AEE462 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		FA187DD929E46AB200D024E7 /* IncorrectAnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncorrectAnswerViewController.swift; sourceTree = "<group>"; };
+		FA187DDB29E46B4A00D024E7 /* IncorrectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncorrectView.swift; sourceTree = "<group>"; };
+		FA187DDE29E58A9800D024E7 /* LearnedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnedViewController.swift; sourceTree = "<group>"; };
+		FA187DE029E58ADD00D024E7 /* NotLearnedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotLearnedViewController.swift; sourceTree = "<group>"; };
+		FA187DE429E5980200D024E7 /* LearnedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnedCell.swift; sourceTree = "<group>"; };
+		FA187DE629E5984300D024E7 /* NotLearnedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotLearnedCell.swift; sourceTree = "<group>"; };
+		FA5E2DD329DAED0A0061817A /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		FA5E2DD629DAF29B0061817A /* CorrectAnswerWiewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectAnswerWiewController.swift; sourceTree = "<group>"; };
+		FA5E2DD829DAF49B0061817A /* CorrectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectView.swift; sourceTree = "<group>"; };
 		FA84157829D7175F00F5FC39 /* Learning5000Words.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Learning5000Words.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA84157B29D7175F00F5FC39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA84157D29D7175F00F5FC39 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +70,8 @@
 		FA84159F29D71B3B00F5FC39 /* ChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeView.swift; sourceTree = "<group>"; };
 		FA8415A129D71B7E00F5FC39 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		FA8415A329D71BAC00F5FC39 /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
+		FA8A163F29DC963100AEE462 /* EmptyViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViews.swift; sourceTree = "<group>"; };
+		FAF3A13E29DEC40A007DE770 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,13 +79,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA84159C29D719B200F5FC39 /* SnapKit in Frameworks */,
+				FA8A163929DC565F00AEE462 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA187DDD29E5884100D024E7 /* WordList */ = {
+			isa = PBXGroup;
+			children = (
+				FA187DDE29E58A9800D024E7 /* LearnedViewController.swift */,
+				FA187DE029E58ADD00D024E7 /* NotLearnedViewController.swift */,
+			);
+			name = WordList;
+			sourceTree = "<group>";
+		};
+		FA5E2DD529DAF2270061817A /* Answers */ = {
+			isa = PBXGroup;
+			children = (
+				FA5E2DD629DAF29B0061817A /* CorrectAnswerWiewController.swift */,
+				FA5E2DD829DAF49B0061817A /* CorrectView.swift */,
+				FA187DD929E46AB200D024E7 /* IncorrectAnswerViewController.swift */,
+				FA187DDB29E46B4A00D024E7 /* IncorrectView.swift */,
+			);
+			path = Answers;
+			sourceTree = "<group>";
+		};
 		FA84156F29D7175F00F5FC39 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +127,7 @@
 			children = (
 				FA8415A529D71BD400F5FC39 /* App */,
 				FA84158F29D7182E00F5FC39 /* Screens */,
+				FAF3A13D29DEC1BE007DE770 /* Components */,
 				FA84159729D7193F00F5FC39 /* Service */,
 				FA8415A629D71C1600F5FC39 /* Resources */,
 				FA84158929D7176200F5FC39 /* Info.plist */,
@@ -85,6 +141,8 @@
 				FA84159029D7183D00F5FC39 /* Words */,
 				FA84159129D7185600F5FC39 /* Cells */,
 				FA84159229D7186000F5FC39 /* Challenge */,
+				FA5E2DD529DAF2270061817A /* Answers */,
+				FA187DDD29E5884100D024E7 /* WordList */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -101,6 +159,8 @@
 			isa = PBXGroup;
 			children = (
 				FA84159529D718E200F5FC39 /* WordsCell.swift */,
+				FA187DE429E5980200D024E7 /* LearnedCell.swift */,
+				FA187DE629E5984300D024E7 /* NotLearnedCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -110,8 +170,6 @@
 			children = (
 				FA84159D29D71B1C00F5FC39 /* ChallengeViewController.swift */,
 				FA84159F29D71B3B00F5FC39 /* ChallengeView.swift */,
-				FA8415A129D71B7E00F5FC39 /* Button.swift */,
-				FA8415A329D71BAC00F5FC39 /* Labels.swift */,
 			);
 			path = Challenge;
 			sourceTree = "<group>";
@@ -129,6 +187,7 @@
 			children = (
 				FA84157B29D7175F00F5FC39 /* AppDelegate.swift */,
 				FA84157D29D7175F00F5FC39 /* SceneDelegate.swift */,
+				FAF3A13E29DEC40A007DE770 /* TabBarController.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -143,6 +202,17 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		FAF3A13D29DEC1BE007DE770 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FA8415A129D71B7E00F5FC39 /* Button.swift */,
+				FA8415A329D71BAC00F5FC39 /* Labels.swift */,
+				FA5E2DD329DAED0A0061817A /* ProgressView.swift */,
+				FA8A163F29DC963100AEE462 /* EmptyViews.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -153,6 +223,7 @@
 				FA84157429D7175F00F5FC39 /* Sources */,
 				FA84157529D7175F00F5FC39 /* Frameworks */,
 				FA84157629D7175F00F5FC39 /* Resources */,
+				FA8A163E29DC571C00AEE462 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -160,7 +231,7 @@
 			);
 			name = Learning5000Words;
 			packageProductDependencies = (
-				FA84159B29D719B200F5FC39 /* SnapKit */,
+				FA8A163829DC565F00AEE462 /* SnapKit */,
 			);
 			productName = Learning5000Words;
 			productReference = FA84157829D7175F00F5FC39 /* Learning5000Words.app */;
@@ -191,7 +262,7 @@
 			);
 			mainGroup = FA84156F29D7175F00F5FC39;
 			packageReferences = (
-				FA84159A29D719B200F5FC39 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				FA8A163729DC565F00AEE462 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = FA84157929D7175F00F5FC39 /* Products */;
 			projectDirPath = "";
@@ -220,15 +291,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA187DE129E58ADD00D024E7 /* NotLearnedViewController.swift in Sources */,
 				FA84159929D7197100F5FC39 /* WordsSettings.swift in Sources */,
 				FA84157C29D7175F00F5FC39 /* AppDelegate.swift in Sources */,
+				FA187DDC29E46B4A00D024E7 /* IncorrectView.swift in Sources */,
+				FA187DE529E5980200D024E7 /* LearnedCell.swift in Sources */,
+				FA8A164029DC963100AEE462 /* EmptyViews.swift in Sources */,
 				FA84159629D718E200F5FC39 /* WordsCell.swift in Sources */,
 				FA8415A029D71B3B00F5FC39 /* ChallengeView.swift in Sources */,
 				FA84159E29D71B1C00F5FC39 /* ChallengeViewController.swift in Sources */,
+				FA5E2DD929DAF49B0061817A /* CorrectView.swift in Sources */,
 				FA8415A429D71BAC00F5FC39 /* Labels.swift in Sources */,
 				FA84159429D718A600F5FC39 /* WordsViewController.swift in Sources */,
+				FA5E2DD729DAF29B0061817A /* CorrectAnswerWiewController.swift in Sources */,
 				FA8415A229D71B7E00F5FC39 /* Button.swift in Sources */,
+				FAF3A13F29DEC40A007DE770 /* TabBarController.swift in Sources */,
 				FA84157E29D7175F00F5FC39 /* SceneDelegate.swift in Sources */,
+				FA187DDF29E58A9800D024E7 /* LearnedViewController.swift in Sources */,
+				FA187DDA29E46AB200D024E7 /* IncorrectAnswerViewController.swift in Sources */,
+				FA5E2DD429DAED0A0061817A /* ProgressView.swift in Sources */,
+				FA187DE729E5984300D024E7 /* NotLearnedCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,7 +532,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		FA84159A29D719B200F5FC39 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		FA8A163729DC565F00AEE462 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
@@ -461,9 +543,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		FA84159B29D719B200F5FC39 /* SnapKit */ = {
+		FA8A163829DC565F00AEE462 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FA84159A29D719B200F5FC39 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = FA8A163729DC565F00AEE462 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */

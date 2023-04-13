@@ -1,58 +1,49 @@
 //
-//  WordsViewController.swift
+//  NotLearnedViewController.swift
 //  Learning5000Words
 //
-//  Created by Pavel Lazarev Macbook on 31.03.2023.
+//  Created by Pavel Lazarev Macbook on 11.04.2023.
 //
 
 import UIKit
-import SnapKit
 
-final class WordsViewController: UIViewController {
+final class NotLearnedViewController: UIViewController {
     
     lazy var tableView: UITableView = {
-        var tableView = UITableView.init()
+        let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(WordsCell.self, forCellReuseIdentifier: WordsCell.reuseID)
+        tableView.register(NotLearnedCell.self, forCellReuseIdentifier: NotLearnedCell.reuseId)
         return tableView
     }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
         setupConstraints()
-
-        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
     }
     
     private func setupViews() {
         view.addSubview(tableView)
     }
-    
     private func setupConstraints() {
         tableView.snp.makeConstraints { make in
-            make.top.left.right.bottom.equalTo(view)
+            make.left.right.top.bottom.equalTo(view)
         }
     }
 }
-
-extension WordsViewController: UITableViewDelegate, UITableViewDataSource {
+extension NotLearnedViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         studiedWords.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: WordsCell.reuseID, for: indexPath) as? WordsCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: NotLearnedCell.reuseId, for: indexPath) as? NotLearnedCell else {
             return UITableViewCell()
         }
-        let wordsList = studiedWords[indexPath.row]
-        cell.update(wordsList)
+        let notLearnedList = studiedWords[indexPath.row]
+        cell.update(notLearnedList)
+        
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

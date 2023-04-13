@@ -5,18 +5,18 @@
 //  Created by Pavel Lazarev Macbook on 31.03.2023.
 //
 
-import Foundation
+//import Foundation
 import UIKit
 
-class ChallengeView: UIView {
+final class ChallengeView: UIView {
     
     private let verticalStackView: UIStackView = {
-        let verticalStackView = UIStackView()
-        verticalStackView.translatesAutoresizingMaskIntoConstraints = false
-        verticalStackView.axis = .vertical
-        verticalStackView.spacing = 20
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .vertical
+        stackView.spacing = 20
         
-        return verticalStackView
+        return stackView
     }()
 
     override init(frame: CGRect) {

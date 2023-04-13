@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class WordsCell: UITableViewCell {
+final class WordsCell: UITableViewCell {
     
     static let reuseID = "WordsCell"
     // MARK: - Creating elements
@@ -19,10 +19,11 @@ class WordsCell: UITableViewCell {
         view.layer.borderColor = UIColor.gray.withAlphaComponent(0.5).cgColor
         view.layer.borderWidth = 0.5
         view.layer.cornerRadius = 20
+        view.backgroundColor = .blue.withAlphaComponent(0.1)
         return view
     }()
     
-    private let wordsVerticalStackView: UIStackView = {
+    private let verticalStackView: UIStackView = {
         let stackView = UIStackView.init()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
@@ -42,16 +43,16 @@ class WordsCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .darkGray.withAlphaComponent(0.3)
         label.numberOfLines = 2
-        label.font = UIFont.boldSystemFont(ofSize: 12)
+        label.font = UIFont.boldSystemFont(ofSize: 13)
         return label
     }()
     
     private let soundButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage.init(systemName: "speaker.wave.2"), for: .normal)
+        button.setImage(UIImage.init(systemName: "speaker.wave.2.fill"), for: .normal)
         button.layer.cornerRadius = 20
-        button.setTitleColor(.blue, for: .normal)
+        button.tintColor = .black
         button.backgroundColor = .systemGray.withAlphaComponent(0.1)
         button.widthAnchor.constraint(equalToConstant: 40).isActive = true
         button.heightAnchor.constraint(equalToConstant: 40).isActive = true
@@ -71,11 +72,10 @@ class WordsCell: UITableViewCell {
     private func setupViews() {
         contentView.addSubview(containerView)
         containerView.addSubview(soundButton)
+        containerView.addSubview(verticalStackView)
         
-        containerView.addSubview(wordsVerticalStackView)
-        
-        wordsVerticalStackView.addArrangedSubview(nameLabel)
-        wordsVerticalStackView.addArrangedSubview(descriptionLabel)
+        verticalStackView.addArrangedSubview(nameLabel)
+        verticalStackView.addArrangedSubview(descriptionLabel)
     }
     
     private func setupConstraints() {
@@ -86,7 +86,7 @@ class WordsCell: UITableViewCell {
             make.left.equalTo(containerView.snp.left).offset(8)
             make.centerY.equalTo(containerView.snp.centerY)
         }
-        wordsVerticalStackView.snp.makeConstraints { make in
+        verticalStackView.snp.makeConstraints { make in
             make.top.right.bottom.equalTo(containerView).inset(8)
             make.left.equalTo(soundButton.snp.right).offset(8)
         }
@@ -96,7 +96,4 @@ class WordsCell: UITableViewCell {
         nameLabel.text = word.name
         descriptionLabel.text = word.description
     }
-        
-        
-        
-    }
+}

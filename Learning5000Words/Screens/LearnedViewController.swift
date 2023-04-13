@@ -1,21 +1,21 @@
 //
-//  WordsViewController.swift
+//  LearnedListViewController.swift
 //  Learning5000Words
 //
-//  Created by Pavel Lazarev Macbook on 31.03.2023.
+//  Created by Pavel Lazarev Macbook on 11.04.2023.
 //
 
 import UIKit
-import SnapKit
+//import SnapKit
 
-final class WordsViewController: UIViewController {
+final class LearnedViewController: UIViewController {
     
     lazy var tableView: UITableView = {
-        var tableView = UITableView.init()
+        let tableView = UITableView.init()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(WordsCell.self, forCellReuseIdentifier: WordsCell.reuseID)
+        tableView.register(LearnedCell.self, forCellReuseIdentifier: LearnedCell.reuseId)
         return tableView
     }()
     
@@ -23,8 +23,6 @@ final class WordsViewController: UIViewController {
         super.viewDidLoad()
         setupViews()
         setupConstraints()
-
-        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
     }
     
     private func setupViews() {
@@ -33,22 +31,26 @@ final class WordsViewController: UIViewController {
     
     private func setupConstraints() {
         tableView.snp.makeConstraints { make in
-            make.top.left.right.bottom.equalTo(view)
+            make.left.right.top.bottom.equalTo(view)
         }
     }
+    
 }
+extension LearnedViewController : UITableViewDataSource, UITableViewDelegate {
+    
+    // MARK: - Table view data source
 
-extension WordsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         studiedWords.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: WordsCell.reuseID, for: indexPath) as? WordsCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: LearnedCell.reuseId, for: indexPath) as? LearnedCell else {
             return UITableViewCell()
         }
-        let wordsList = studiedWords[indexPath.row]
-        cell.update(wordsList)
+        let learnedList = studiedWords[indexPath.row]
+        cell.update(learnedList)
+        
         return cell
     }
     

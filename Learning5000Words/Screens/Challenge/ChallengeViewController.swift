@@ -13,7 +13,6 @@ final class ChallengeViewController: UIViewController {
    private let challengeView: ChallengeView = {
         let view = ChallengeView()
         view.heightAnchor.constraint(equalToConstant: 250).isActive = true
-        
         return view
     }()
     
@@ -23,33 +22,7 @@ final class ChallengeViewController: UIViewController {
         stackView.axis = .vertical
         stackView.spacing = 15
         stackView.layer.cornerRadius = 10
-        
         return stackView
-    }()
-
-    private let topEmptyView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        return view
-    }()
-    
-    private let lowerEmptyView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        
-        return view
-    }()
-    
-    private let progressView: UIProgressView = {
-        let progressView = UIProgressView()
-        progressView.translatesAutoresizingMaskIntoConstraints = false
-        progressView.transform = progressView.transform.scaledBy(x: 0.5, y: 2)
-        progressView.layer.cornerRadius = 2
-        progressView.progress = 0.5
-        
-        return progressView
     }()
 
     override func viewDidLoad() {
@@ -62,7 +35,9 @@ final class ChallengeViewController: UIViewController {
         view.backgroundColor = .white
         view.addSubview(challengeVertivalStackView)
         
-        var elements = [progressView, topEmptyView, Labels.headerLabel, challengeView, lowerEmptyView]
+        var elements = [ProgressView.progressView, EmptyView.topEmptyView, Labels.headerLabel,
+                        challengeView, EmptyView.lowerEmptyView
+        ]
        
         var buttons = [UIButton]()
         for index in 1...4 {
