@@ -5,7 +5,7 @@
 //  Created by Pavel Lazarev Macbook on 10.04.2023.
 //
 import UIKit
-import Foundation
+//import Foundation
 
 final class IncorectView: UIView {
     

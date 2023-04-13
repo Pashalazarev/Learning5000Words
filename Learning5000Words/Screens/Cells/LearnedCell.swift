@@ -7,28 +7,28 @@
 
 import UIKit
 
-class LearnedCell: UITableViewCell {
-
+final class LearnedCell: UITableViewCell {
+    
     static let reuseId = "LearnedCell"
     
     private let verticalSTackView: UIStackView = {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
-        stackView.alignment = .leading
-        stackView.spacing = 5
+        
+        stackView.alignment = .fill
         return stackView
     }()
     
-    private let worldLabel: UILabel = { // может быть сделать 1 свойство для лейбла во всех ячейках
+    private let wordLabel: UILabel = { // общее свойство для learnedcell и notLearnedCell
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.boldSystemFont(ofSize: 15)
+        label.font = UIFont.systemFont(ofSize: 13)
         label.textColor = .systemBlue.withAlphaComponent(0.6)
         return label
     }()
     
-    private let translationLabel: UILabel = {
+    private let translationLabel: UILabel = { // общее свойство для learnedcell и notLearnedCell
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 13)
@@ -36,7 +36,7 @@ class LearnedCell: UITableViewCell {
         return label
     }()
     
-    private let wordImage: UIImageView = {
+    private let wordImage: UIImageView = { // общее свойство для learnedcell и notLearnedCell
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.heightAnchor.constraint(equalToConstant: 30).isActive = true
@@ -57,11 +57,11 @@ class LearnedCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - может быть тут тоже нужен?
+// MARK: - может быть тут тоже нужен?
     private func setupViews() {
         contentView.addSubview(verticalSTackView)
         contentView.addSubview(wordImage)
-        verticalSTackView.addArrangedSubview(worldLabel)
+        verticalSTackView.addArrangedSubview(wordLabel)
         verticalSTackView.addArrangedSubview(translationLabel)
         
     }
@@ -73,13 +73,15 @@ class LearnedCell: UITableViewCell {
         }
         verticalSTackView.snp.makeConstraints { make in
             make.left.equalTo(wordImage.snp.right).offset(8)
-            make.top.bottom.equalTo(contentView)
+            make.top.equalTo(contentView.snp.top).inset(6)
+            make.bottom.equalTo(contentView.snp.bottom).inset(6)
         }
     }
-
+    
     func update(_ word: Words) {
-        worldLabel.text = word.name
+        wordLabel.text = word.name
         translationLabel.text = word.translation
-
     }
 }
+
+

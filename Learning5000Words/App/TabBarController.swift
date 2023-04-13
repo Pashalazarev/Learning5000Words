@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TabBarController: UITabBarController {
+final class TabBarController: UITabBarController {
     
     private let wordsVC: WordsViewController = {
         let controller = WordsViewController()
@@ -40,10 +40,28 @@ class TabBarController: UITabBarController {
         let controller = IncorrectAnswerViewController()
         let image = UIImage(systemName: "hand.thumbsdown")
         let selectedImage = UIImage(systemName: "hand.thumbsdown.fill")
-        let tabIten = UITabBarItem.init(title: "Ответил не верно", image: image, selectedImage: selectedImage)
+        let tabItem = UITabBarItem.init(title: "Ответил не верно", image: image, selectedImage: selectedImage)
+        controller.tabBarItem = tabItem
         return controller
     }()
-    // TODO: сделать таб бар для 3х экранов (, экраны где лежат выученные слова и и нет)
+    
+    private let learnedVC: LearnedViewController = {
+        let controller = LearnedViewController()
+        let image = UIImage(systemName: "book.closed")
+        let selectedImage = UIImage(systemName: "book.closed.fill")
+        let tabItem = UITabBarItem.init(title: "Выученные слова", image: image, selectedImage: selectedImage)
+        controller.tabBarItem = tabItem
+        return controller
+    }()
+    
+    private let notLearnedVC: NotLearnedViewController = {
+        let controller = NotLearnedViewController()
+        let image = UIImage(systemName: "book")
+        let selectedImage = UIImage(systemName: "book.fill")
+        let tabItem = UITabBarItem.init(title: "Невыученные слова", image: image , selectedImage: selectedImage)
+        controller.tabBarItem = tabItem
+        return controller
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +70,6 @@ class TabBarController: UITabBarController {
     
     private func setup() {
         tabBar.tintColor = .green
-        viewControllers = [wordsVC, challengeVC, correctAnswerVC]
+        viewControllers = [wordsVC, challengeVC, correctAnswerVC, learnedVC,notLearnedVC]
     }
 }

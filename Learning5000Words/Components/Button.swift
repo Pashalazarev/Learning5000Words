@@ -54,8 +54,5 @@ final class Button: UIButton {
     }()
     
     // MARK: - Buttons for IncorrectAnswer VC
-    
-    static func update(_ word: Words) {
-        
-    }
+
 }

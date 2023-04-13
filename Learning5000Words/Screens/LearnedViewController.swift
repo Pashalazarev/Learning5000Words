@@ -6,10 +6,9 @@
 //
 
 import UIKit
-import SnapKit
+//import SnapKit
 
 final class LearnedViewController: UIViewController {
-    
     
     lazy var tableView: UITableView = {
         let tableView = UITableView.init()
@@ -58,5 +57,4 @@ extension LearnedViewController : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
 }

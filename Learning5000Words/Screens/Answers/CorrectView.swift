@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Foundation
+//import Foundation
 
 final class CorrectView: UIView {
     

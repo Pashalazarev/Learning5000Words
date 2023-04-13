@@ -9,7 +9,7 @@ import UIKit
 
 class Labels: UILabel {
     
-// MARK: Common Labels
+// MARK: - Common Labels
     
     static let wordLabel: UILabel = {
         let label = UILabel()
@@ -19,7 +19,7 @@ class Labels: UILabel {
         label.text = "pretty"
         return label
     }()
-    
+
     static let descriptionLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
@@ -37,7 +37,7 @@ class Labels: UILabel {
         return label
     }()
     
-    //MARK: - Labels for Custom Cells
+//MARK: - Labels for Custom Cells
     
 // MARK: - Labels for CorrectAnswer VC
     

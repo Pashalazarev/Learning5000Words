@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SnapKit
+//import SnapKit
 
 final class CorrectAnswerWiewController: UIViewController {
 

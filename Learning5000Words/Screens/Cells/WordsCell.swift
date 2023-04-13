@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class WordsCell: UITableViewCell {
+final class WordsCell: UITableViewCell {
     
     static let reuseID = "WordsCell"
     // MARK: - Creating elements
@@ -72,7 +72,6 @@ class WordsCell: UITableViewCell {
     private func setupViews() {
         contentView.addSubview(containerView)
         containerView.addSubview(soundButton)
-        
         containerView.addSubview(verticalStackView)
         
         verticalStackView.addArrangedSubview(nameLabel)
