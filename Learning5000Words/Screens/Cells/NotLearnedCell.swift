@@ -12,14 +12,14 @@ final class NotLearnedCell: UITableViewCell {
     
     lazy var verticalStackView = StackView.verticalStackView()
     
-    private let wordImage: UIImageView = { // общее свойство для learnedcell и notLearnedCell
-        let image = UIImageView()
-        image.translatesAutoresizingMaskIntoConstraints = false
-        image.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        image.widthAnchor.constraint(equalToConstant: 30).isActive = true
-        image.image = UIImage(named: "pic for answer")
-        return image
-    }()
+//    private let wordImage: UIImageView = { // общее свойство для learnedcell и notLearnedCell
+//        let image = UIImageView()
+//        image.translatesAutoresizingMaskIntoConstraints = false
+//        image.heightAnchor.constraint(equalToConstant: 30).isActive = true
+//        image.widthAnchor.constraint(equalToConstant: 30).isActive = true
+//        image.image = UIImage(named: "pic for answer")
+//        return image
+//    }()
     
     private lazy var wordLabelCell: UILabel = { //+
         Labels.wordLabelCell()
@@ -41,17 +41,17 @@ final class NotLearnedCell: UITableViewCell {
     
     private func setupViews() {
         contentView.addSubview(verticalStackView)
-        contentView.addSubview(wordImage)
+        contentView.addSubview(Image.wordImage)
         verticalStackView.addArrangedSubview(wordLabelCell)
         verticalStackView.addArrangedSubview(translationLabelCell)
     }
     private func setupConstraints() {
-        wordImage.snp.makeConstraints { make in
+        Image.wordImage.snp.makeConstraints { make in
             make.left.equalTo(contentView.snp.left).inset(16)
             make.top.bottom.equalTo(contentView).inset(8)
         }
         verticalStackView.snp.makeConstraints { make in
-            make.left.equalTo(wordImage.snp.right).offset(8)
+            make.left.equalTo(Image.wordImage.snp.right).offset(8)
             make.top.equalTo(contentView.snp.top).inset(6)
             make.bottom.equalTo(contentView.snp.bottom).inset(6)
         }
