@@ -21,9 +21,7 @@ final class NotLearnedCell: UITableViewCell {
 //        return image
 //    }()
     
-    private lazy var wordLabelCell: UILabel = { //+
-        Labels.wordLabelCell()
-    }()
+    private let wordLabelCell = Labels.wordLabelCell()
     
     private lazy var translationLabelCell: UILabel = { // +
         Labels.translationLabelCell()
