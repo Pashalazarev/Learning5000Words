@@ -11,15 +11,6 @@ final class LearnedCell: UITableViewCell {
     
     static let reuseId = "LearnedCell"
     
-//    private let verticalSTackView: UIStackView = {
-//        let stackView = UIStackView()
-//        stackView.translatesAutoresizingMaskIntoConstraints = false
-//        stackView.axis = .vertical
-//        stackView.alignment = .fill
-//        stackView.spacing = 5
-//        return stackView
-//    }()
-//
     lazy var verticalStackView = StackView.verticalStackView()
     
     private let wordImage: UIImageView = { // общее свойство для learnedcell и notLearnedCell
@@ -31,8 +22,8 @@ final class LearnedCell: UITableViewCell {
         return image
     }()
     
-    private var wordLabelCell = Labels.wordLabelCell()
-    private var translationLabelCell = Labels.translationLabelCell()
+    private let wordLabelCell = Labels.wordLabelCell()
+    private let translationLabelCell = Labels.translationLabelCell()
     
 // MARK: - какой тут марк?
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
