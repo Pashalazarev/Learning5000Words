@@ -38,6 +38,24 @@ class Labels: UILabel {
     }()
     
 //MARK: - Labels for Custom Cells
+
+    static func wordLabelCell() -> UILabel { // общее свойство для learnedcell и notLearnedCell  почему именно метод надо создавать?
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 13)
+        label.textColor = .systemBlue.withAlphaComponent(0.6)
+        return label
+    }
+    
+    static func translationLabelCell() -> UILabel { // общее свойство для learnedcell и notLearnedCell  почему именно метод надо создавать?
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 13)
+        label.textColor = .black
+        return label
+    }
+    
+    
     
 // MARK: - Labels for CorrectAnswer VC
     

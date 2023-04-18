@@ -10,36 +10,7 @@ import UIKit
 final class NotLearnedCell: UITableViewCell {
     static let reuseId = "NotLearnedCell"
     
-    private let containerView: UIView = {
-        let container = UIView()
-        
-        
-       return container
-    }()
-    private let verticalSTackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = .vertical
-        stackView.alignment = .leading
-        stackView.spacing = 5
-        return stackView
-    }()
-    
-    private let wordLabel: UILabel = { // общее свойство для learnedcell и notLearnedCell
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.boldSystemFont(ofSize: 15)
-        label.textColor = .systemBlue.withAlphaComponent(0.6)
-        return label
-    }()
-    
-    private let translationLabel: UILabel = { // общее свойство для learnedcell и notLearnedCell
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.systemFont(ofSize: 13)
-        label.textColor = .black
-        return label
-    }()
+    lazy var verticalStackView = StackView.verticalStackView()
     
     private let wordImage: UIImageView = { // общее свойство для learnedcell и notLearnedCell
         let image = UIImageView()
@@ -48,6 +19,14 @@ final class NotLearnedCell: UITableViewCell {
         image.widthAnchor.constraint(equalToConstant: 30).isActive = true
         image.image = UIImage(named: "pic for answer")
         return image
+    }()
+    
+    private lazy var wordLabelCell: UILabel = { //+
+        Labels.wordLabelCell()
+    }()
+    
+    private lazy var translationLabelCell: UILabel = { // +
+        Labels.translationLabelCell()
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -61,26 +40,25 @@ final class NotLearnedCell: UITableViewCell {
     }
     
     private func setupViews() {
-        contentView.addSubview(verticalSTackView)
+        contentView.addSubview(verticalStackView)
         contentView.addSubview(wordImage)
-        verticalSTackView.addArrangedSubview(wordLabel)
-        verticalSTackView.addArrangedSubview(translationLabel)
+        verticalStackView.addArrangedSubview(wordLabelCell)
+        verticalStackView.addArrangedSubview(translationLabelCell)
     }
     private func setupConstraints() {
         wordImage.snp.makeConstraints { make in
             make.left.equalTo(contentView.snp.left).inset(16)
             make.top.bottom.equalTo(contentView).inset(8)
         }
-        verticalSTackView.snp.makeConstraints { make in
+        verticalStackView.snp.makeConstraints { make in
             make.left.equalTo(wordImage.snp.right).offset(8)
             make.top.equalTo(contentView.snp.top).inset(6)
             make.bottom.equalTo(contentView.snp.bottom).inset(6)
         }
     }
     
-     func update(_ word: Words) {
-        wordLabel.text = word.name
-        translationLabel.text = word.translation
+     func update(_ word: Word) {
+         wordLabelCell.text = word.name
+         translationLabelCell.text = word.translation
     }
 }
-

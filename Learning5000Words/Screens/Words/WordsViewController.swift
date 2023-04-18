@@ -10,12 +10,15 @@ import SnapKit
 
 final class WordsViewController: UIViewController {
     
+    var wordService = WordService()
+   
     lazy var tableView: UITableView = {
         var tableView = UITableView.init()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(WordsCell.self, forCellReuseIdentifier: WordsCell.reuseID)
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         return tableView
     }()
     
@@ -24,9 +27,10 @@ final class WordsViewController: UIViewController {
         setupViews()
         setupConstraints()
 
-        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        wordService.fetchWords()
     }
     
+
     private func setupViews() {
         view.addSubview(tableView)
     }
@@ -40,14 +44,15 @@ final class WordsViewController: UIViewController {
 
 extension WordsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        studiedWords.count
+        wordService.words.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: WordsCell.reuseID, for: indexPath) as? WordsCell else {
             return UITableViewCell()
         }
-        let wordsList = studiedWords[indexPath.row]
+        let wordsList = wordService.words[indexPath.row]
         cell.update(wordsList)
         return cell
     }

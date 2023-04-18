@@ -9,6 +9,8 @@ import UIKit
 
 final class NotLearnedViewController: UIViewController {
     
+    private var wordService = WordService()
+    
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -17,10 +19,13 @@ final class NotLearnedViewController: UIViewController {
         tableView.register(NotLearnedCell.self, forCellReuseIdentifier: NotLearnedCell.reuseId)
         return tableView
     }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
         setupConstraints()
+        
+        wordService.fetchWords()
     }
     
     private func setupViews() {
@@ -34,14 +39,14 @@ final class NotLearnedViewController: UIViewController {
 }
 extension NotLearnedViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        studiedWords.count
+        wordService.words.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: NotLearnedCell.reuseId, for: indexPath) as? NotLearnedCell else {
             return UITableViewCell()
         }
-        let notLearnedList = studiedWords[indexPath.row]
+        let notLearnedList = wordService.words[indexPath.row]
         cell.update(notLearnedList)
         
         return cell

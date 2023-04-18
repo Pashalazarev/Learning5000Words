@@ -6,9 +6,10 @@
 //
 
 import UIKit
-//import SnapKit
 
 final class LearnedViewController: UIViewController {
+    
+    var wordService = WordService()
     
     lazy var tableView: UITableView = {
         let tableView = UITableView.init()
@@ -23,6 +24,8 @@ final class LearnedViewController: UIViewController {
         super.viewDidLoad()
         setupViews()
         setupConstraints()
+        
+        wordService.fetchWords()
     }
     
     private func setupViews() {
@@ -41,14 +44,14 @@ extension LearnedViewController : UITableViewDataSource, UITableViewDelegate {
     // MARK: - Table view data source
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        studiedWords.count
+        wordService.words.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: LearnedCell.reuseId, for: indexPath) as? LearnedCell else {
             return UITableViewCell()
         }
-        let learnedList = studiedWords[indexPath.row]
+        let learnedList = wordService.words[indexPath.row]
         cell.update(learnedList)
         
         return cell

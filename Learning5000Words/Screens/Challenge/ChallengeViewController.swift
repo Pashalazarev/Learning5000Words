@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 final class ChallengeViewController: UIViewController {
-   
+    
    private let challengeView: ChallengeView = {
         let view = ChallengeView()
         view.heightAnchor.constraint(equalToConstant: 250).isActive = true
@@ -29,6 +29,7 @@ final class ChallengeViewController: UIViewController {
         super.viewDidLoad()
         setupViews()
         setupConstraints()
+        
     }
     
     private func setupViews() {

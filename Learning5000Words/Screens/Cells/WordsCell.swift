@@ -92,7 +92,7 @@ final class WordsCell: UITableViewCell {
         }
     }
     
-    func update(_ word: Words) {
+    func update(_ word: Word) {
         nameLabel.text = word.name
         descriptionLabel.text = word.description
     }

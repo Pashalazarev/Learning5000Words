@@ -9,10 +9,11 @@ import UIKit
 //import SnapKit
 
 final class CorrectAnswerWiewController: UIViewController {
-
-   private let correctView: CorrectView = {
+    
+    
+    private let correctView: CorrectView = {
         let view = CorrectView()
-       
+        
         return view
     }()
     
@@ -29,6 +30,8 @@ final class CorrectAnswerWiewController: UIViewController {
         super.viewDidLoad()
         setupViews()
         setupConstraints()
+        
+   
     }
     
     private func setupViews() {

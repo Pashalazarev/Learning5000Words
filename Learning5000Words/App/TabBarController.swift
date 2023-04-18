@@ -9,11 +9,14 @@ import UIKit
 
 final class TabBarController: UITabBarController {
     
+
+    
     private let wordsVC: WordsViewController = {
         let controller = WordsViewController()
         let image = UIImage(systemName: "menucard")
         let selectedImage = UIImage(systemName: "menucard.fill")
         let tabItem = UITabBarItem.init(title: "Меню", image: image, selectedImage: selectedImage)
+        tabItem.setTitleTextAttributes([NSAttributedString.Key.font : UIFont.systemFont(ofSize: 9)], for: .normal)
         controller.tabBarItem = tabItem
         return controller
     }()
@@ -22,7 +25,8 @@ final class TabBarController: UITabBarController {
         let controller = ChallengeViewController()
         let image = UIImage(systemName: "questionmark.circle")
         let selectedImage = UIImage(systemName: "questionmark.circle.fill")
-        let tabItem = UITabBarItem.init(title: "Выбери вариант ответа", image: image, selectedImage: selectedImage)
+        let tabItem = UITabBarItem.init(title: "Варианты ответа", image: image, selectedImage: selectedImage)
+        tabItem.setTitleTextAttributes([NSAttributedString.Key.font : UIFont.systemFont(ofSize: 9)], for: .normal)
         controller.tabBarItem = tabItem
         return controller
     }()
@@ -32,6 +36,7 @@ final class TabBarController: UITabBarController {
         let image = UIImage(systemName: "hand.thumbsup")
         let selectedImage = UIImage(systemName: "hand.thumbsup.fill")
         let tabItem = UITabBarItem.init(title: "Ответил верно", image: image, selectedImage: selectedImage)
+        tabItem.setTitleTextAttributes([NSAttributedString.Key.font : UIFont.systemFont(ofSize: 9)], for: .normal)
         controller.tabBarItem = tabItem
         return controller
     }()
@@ -41,6 +46,7 @@ final class TabBarController: UITabBarController {
         let image = UIImage(systemName: "hand.thumbsdown")
         let selectedImage = UIImage(systemName: "hand.thumbsdown.fill")
         let tabItem = UITabBarItem.init(title: "Ответил не верно", image: image, selectedImage: selectedImage)
+        tabItem.setTitleTextAttributes([NSAttributedString.Key.font : UIFont.systemFont(ofSize: 9)], for: .normal)
         controller.tabBarItem = tabItem
         return controller
     }()
@@ -50,6 +56,7 @@ final class TabBarController: UITabBarController {
         let image = UIImage(systemName: "book.closed")
         let selectedImage = UIImage(systemName: "book.closed.fill")
         let tabItem = UITabBarItem.init(title: "Выученные слова", image: image, selectedImage: selectedImage)
+        tabItem.setTitleTextAttributes([NSAttributedString.Key.font : UIFont.systemFont(ofSize: 9)], for: .normal)
         controller.tabBarItem = tabItem
         return controller
     }()
@@ -59,6 +66,7 @@ final class TabBarController: UITabBarController {
         let image = UIImage(systemName: "book")
         let selectedImage = UIImage(systemName: "book.fill")
         let tabItem = UITabBarItem.init(title: "Невыученные слова", image: image , selectedImage: selectedImage)
+        tabItem.setTitleTextAttributes([NSAttributedString.Key.font : UIFont.systemFont(ofSize: 9)], for: .normal)
         controller.tabBarItem = tabItem
         return controller
     }()
@@ -70,6 +78,6 @@ final class TabBarController: UITabBarController {
     
     private func setup() {
         tabBar.tintColor = .green
-        viewControllers = [wordsVC, challengeVC, correctAnswerVC, learnedVC,notLearnedVC]
+        viewControllers = [wordsVC, challengeVC, correctAnswerVC, learnedVC, notLearnedVC]
     }
 }

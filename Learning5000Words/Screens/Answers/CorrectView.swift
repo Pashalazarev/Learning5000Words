@@ -62,7 +62,6 @@ final class CorrectView: UIView {
      }
 
     private func setupConstraints() {
-        
         verticalStackView.snp.makeConstraints { make in
             make.left.right.equalTo(self).inset(40)
             make.top.equalTo(self).inset(40)
