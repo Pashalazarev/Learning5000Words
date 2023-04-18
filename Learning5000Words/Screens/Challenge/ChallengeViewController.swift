@@ -15,15 +15,15 @@ final class ChallengeViewController: UIViewController {
         view.heightAnchor.constraint(equalToConstant: 250).isActive = true
         return view
     }()
+    private let stackViewSpacing: CGFloat = 10
     
-    private let challengeVertivalStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = .vertical
-        stackView.spacing = 15
-        stackView.layer.cornerRadius = 10
-        return stackView
-    }()
+//    private let challengeVertivalStackView: UIStackView = {
+//        let stackView = UIStackView()
+//        stackView.translatesAutoresizingMaskIntoConstraints = false
+//        stackView.axis = .vertical
+//        stackView.spacing = 10
+//        return stackView
+//    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +34,7 @@ final class ChallengeViewController: UIViewController {
     
     private func setupViews() {
         view.backgroundColor = .white
-        view.addSubview(challengeVertivalStackView)
+        view.addSubview(StackView.verticalStackView(withSpacing: stackViewSpacing))
         
         var elements = [ProgressView.progressView, EmptyView.topEmptyView, Labels.headerLabel,
                         challengeView, EmptyView.lowerEmptyView
@@ -50,19 +50,19 @@ final class ChallengeViewController: UIViewController {
         elements.append(contentsOf: buttons)
         
         elements.forEach { item in
-            challengeVertivalStackView.addArrangedSubview(item)
+            StackView.verticalStackView(withSpacing: stackViewSpacing).addArrangedSubview(item)
         }
     }
     
     private func setupConstraints() {
         
-        challengeVertivalStackView.snp.makeConstraints { make in
+        StackView.verticalStackView(withSpacing: stackViewSpacing).snp.makeConstraints { make in
             make.top.equalTo(view).inset(60)
             make.left.right.equalTo(view).inset(40)
         }
 
         challengeView.snp.makeConstraints { make in
-            make.left.right.equalTo(challengeVertivalStackView).inset(25)
+            make.left.right.equalTo(StackView.verticalStackView(withSpacing: stackViewSpacing)).inset(25)
         }
     }
 }

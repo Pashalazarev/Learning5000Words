@@ -9,16 +9,16 @@
 import UIKit
 
 final class ChallengeView: UIView {
-    
-    private let verticalStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = .vertical
-        stackView.spacing = 20
-        
-        return stackView
-    }()
-
+    private let stackViewSpacing: CGFloat = 10
+//
+//    private let verticalStackView: UIStackView = {
+//        let stackView = UIStackView()
+//        stackView.translatesAutoresizingMaskIntoConstraints = false
+//        stackView.axis = .vertical
+//        stackView.spacing = 10
+//
+//        return stackView
+//    }()
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -34,17 +34,17 @@ final class ChallengeView: UIView {
         self.backgroundColor = .systemTeal.withAlphaComponent(0.2)
         self.layer.cornerRadius = 20
 
-        self.addSubview(verticalStackView)
+        self.addSubview(StackView.verticalStackView(withSpacing: stackViewSpacing))
         self.addSubview(Button.clueButton)
         
         let elements = [ Button.soundButton, Labels.wordLabel, Labels.transcriptionLabel ]
         elements.forEach { elements in
-            verticalStackView.addArrangedSubview(elements)
+            StackView.verticalStackView(withSpacing: stackViewSpacing).addArrangedSubview(elements)
         }
     }
     
     private func setupConstraints() {
-        verticalStackView.snp.makeConstraints { make in
+        StackView.verticalStackView(withSpacing: stackViewSpacing).snp.makeConstraints { make in
             make.centerX.centerY.equalTo(self)
         }
         Button.clueButton.snp.makeConstraints { make in

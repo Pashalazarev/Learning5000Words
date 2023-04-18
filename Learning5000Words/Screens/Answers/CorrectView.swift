@@ -10,7 +10,7 @@ import UIKit
 
 final class CorrectView: UIView {
     
-    private let verticalStackView: UIStackView = {
+    private let verticalStackView: UIStackView = { // такой же как и в incorrectView
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical

@@ -15,14 +15,7 @@ final class IncorrectAnswerViewController: UIViewController {
         return view
     }()
     
-    private let verticalStackView: UIStackView = {
-        let view = UIStackView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.axis = .vertical
-        view.spacing = 10
-        
-        return view
-    }()
+    private let verticalStackView = StackView.verticalStackView(withSpacing: 10)
     
     override func viewDidLoad() {
         super.viewDidLoad()

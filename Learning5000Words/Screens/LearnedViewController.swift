@@ -9,7 +9,7 @@ import UIKit
 
 final class LearnedViewController: UIViewController {
     
-    var wordService = WordService()
+    var wordService = WordService() // ПОСМОТРЕТЬ ДЛЯ ЧЕГО ЭТО
     
     lazy var tableView: UITableView = {
         let tableView = UITableView.init()

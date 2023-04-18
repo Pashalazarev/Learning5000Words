@@ -8,24 +8,14 @@
 import UIKit
 
 final class NotLearnedCell: UITableViewCell {
+    
     static let reuseId = "NotLearnedCell"
     
-    lazy var verticalStackView = StackView.verticalStackView()
-    
-//    private let wordImage: UIImageView = { // общее свойство для learnedcell и notLearnedCell
-//        let image = UIImageView()
-//        image.translatesAutoresizingMaskIntoConstraints = false
-//        image.heightAnchor.constraint(equalToConstant: 30).isActive = true
-//        image.widthAnchor.constraint(equalToConstant: 30).isActive = true
-//        image.image = UIImage(named: "pic for answer")
-//        return image
-//    }()
-    
     private let wordLabelCell = Labels.wordLabelCell()
+    private let translationLabelCell = Labels.translationLabelCell()
     
-    private lazy var translationLabelCell: UILabel = { // +
-        Labels.translationLabelCell()
-    }()
+    lazy var wordImage = Image.wordImage()
+    lazy var verticalStackView = StackView.tableVerticalStackView(withSpacing: 5)
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -39,17 +29,17 @@ final class NotLearnedCell: UITableViewCell {
     
     private func setupViews() {
         contentView.addSubview(verticalStackView)
-        contentView.addSubview(Image.wordImage)
+        contentView.addSubview(wordImage)
         verticalStackView.addArrangedSubview(wordLabelCell)
         verticalStackView.addArrangedSubview(translationLabelCell)
     }
     private func setupConstraints() {
-        Image.wordImage.snp.makeConstraints { make in
+        wordImage.snp.makeConstraints { make in
             make.left.equalTo(contentView.snp.left).inset(16)
             make.top.bottom.equalTo(contentView).inset(8)
         }
         verticalStackView.snp.makeConstraints { make in
-            make.left.equalTo(Image.wordImage.snp.right).offset(8)
+            make.left.equalTo(wordImage.snp.right).offset(8)
             make.top.equalTo(contentView.snp.top).inset(6)
             make.bottom.equalTo(contentView.snp.bottom).inset(6)
         }

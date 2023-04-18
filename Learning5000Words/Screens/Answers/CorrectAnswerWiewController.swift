@@ -10,27 +10,17 @@ import UIKit
 
 final class CorrectAnswerWiewController: UIViewController {
     
-    
     private let correctView: CorrectView = {
         let view = CorrectView()
         return view
     }()
     
-    private let verticalStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = .vertical
-        stackView.spacing = 10
-        
-        return stackView
-    }()
+    private let verticalStackView = StackView.verticalStackView(withSpacing: 10)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
         setupConstraints()
-        
-   
     }
     
     private func setupViews() {
