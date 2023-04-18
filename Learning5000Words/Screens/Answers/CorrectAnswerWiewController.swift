@@ -13,7 +13,6 @@ final class CorrectAnswerWiewController: UIViewController {
     
     private let correctView: CorrectView = {
         let view = CorrectView()
-        
         return view
     }()
     
