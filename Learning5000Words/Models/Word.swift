@@ -7,10 +7,13 @@
 
 import Foundation
 
-struct Word {
-    let name: String
-    let description: String
-    let transcription: String
-    let translation: String
-
+//struct Word {
+//    let name: String
+//    let description: String
+//    let transcription: String
+//    let translation: String
+//}
+struct Word2: Codable {
+    let word: String
+    let translate: String
 }

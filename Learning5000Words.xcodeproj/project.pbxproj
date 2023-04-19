@@ -18,6 +18,8 @@
 		FA5E2DD929DAF49B0061817A /* CorrectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E2DD829DAF49B0061817A /* CorrectView.swift */; };
 		FA7775E929E96236000D9B20 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7775E829E96236000D9B20 /* Word.swift */; };
 		FA789A0329E889990020C86E /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA789A0229E889990020C86E /* StackView.swift */; };
+		FA78B0DA29F023B30089BBB0 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA78B0D929F023B30089BBB0 /* NetworkService.swift */; };
+		FA78B0DE29F053750089BBB0 /* JsonLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA78B0DD29F053750089BBB0 /* JsonLoader.swift */; };
 		FA84157C29D7175F00F5FC39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84157B29D7175F00F5FC39 /* AppDelegate.swift */; };
 		FA84157E29D7175F00F5FC39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84157D29D7175F00F5FC39 /* SceneDelegate.swift */; };
 		FA84158329D7175F00F5FC39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA84158129D7175F00F5FC39 /* Main.storyboard */; };
@@ -61,6 +63,8 @@
 		FA5E2DD829DAF49B0061817A /* CorrectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectView.swift; sourceTree = "<group>"; };
 		FA7775E829E96236000D9B20 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		FA789A0229E889990020C86E /* StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
+		FA78B0D929F023B30089BBB0 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		FA78B0DD29F053750089BBB0 /* JsonLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonLoader.swift; sourceTree = "<group>"; };
 		FA84157829D7175F00F5FC39 /* Learning5000Words.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Learning5000Words.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA84157B29D7175F00F5FC39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA84157D29D7175F00F5FC39 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 		FA78B0D829F020710089BBB0 /* NetworkService */ = {
 			isa = PBXGroup;
 			children = (
+				FA78B0D929F023B30089BBB0 /* NetworkService.swift */,
+				FA78B0DD29F053750089BBB0 /* JsonLoader.swift */,
 			);
 			path = NetworkService;
 			sourceTree = "<group>";
@@ -326,6 +332,7 @@
 				FA8415A029D71B3B00F5FC39 /* ChallengeView.swift in Sources */,
 				FA789A0329E889990020C86E /* StackView.swift in Sources */,
 				FA84159E29D71B1C00F5FC39 /* ChallengeViewController.swift in Sources */,
+				FA78B0DA29F023B30089BBB0 /* NetworkService.swift in Sources */,
 				FA5E2DD929DAF49B0061817A /* CorrectView.swift in Sources */,
 				FA7775E929E96236000D9B20 /* Word.swift in Sources */,
 				FA8415A429D71BAC00F5FC39 /* Labels.swift in Sources */,
@@ -339,6 +346,7 @@
 				FA187DDA29E46AB200D024E7 /* IncorrectAnswerViewController.swift in Sources */,
 				FA5E2DD429DAED0A0061817A /* ProgressView.swift in Sources */,
 				FA187DE729E5984300D024E7 /* NotLearnedCell.swift in Sources */,
+				FA78B0DE29F053750089BBB0 /* JsonLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
