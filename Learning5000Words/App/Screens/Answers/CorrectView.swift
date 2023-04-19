@@ -6,19 +6,19 @@
 //
 
 import UIKit
-//import Foundation
 
 final class CorrectView: UIView {
     
-    private let verticalStackView: UIStackView = { // такой же как и в incorrectView
-        let stackView = UIStackView()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = .vertical
-        stackView.alignment = .center
-        stackView.spacing = 15
-        
-        return stackView
-    }()
+//    private let verticalStackView: UIStackView = { // такой же как и в incorrectView
+//        let stackView = UIStackView()
+//        stackView.translatesAutoresizingMaskIntoConstraints = false
+//        stackView.axis = .vertical
+//        stackView.alignment = .center
+//        stackView.spacing = 15
+//
+//        return stackView
+//    }()
+    private let verticalStackView = StackView.customVerticalStackView(withSpacing: 15, withAlignment: .center)
     
    private let wordImageView: UIImageView = {
         let image = UIImageView()

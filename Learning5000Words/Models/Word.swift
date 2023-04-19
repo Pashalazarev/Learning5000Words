@@ -12,4 +12,5 @@ struct Word {
     let description: String
     let transcription: String
     let translation: String
+
 }

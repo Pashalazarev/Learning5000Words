@@ -15,7 +15,7 @@ final class NotLearnedCell: UITableViewCell {
     private let translationLabelCell = Labels.translationLabelCell()
     
     lazy var wordImage = Image.wordImage()
-    lazy var verticalStackView = StackView.tableVerticalStackView(withSpacing: 5)
+    lazy var verticalStackView = StackView.customVerticalStackView(withSpacing: 5, withAlignment: .fill)
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

@@ -8,7 +8,7 @@
 import UIKit
 
 final class StackView: UIStackView {
-    // MARK: - VerticalStackView for 
+
     static func verticalStackView(withSpacing: CGFloat) -> UIStackView {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -17,14 +17,15 @@ final class StackView: UIStackView {
         return stackView
     }
     
-    static func tableVerticalStackView(withSpacing: CGFloat) -> UIStackView {
+    static func customVerticalStackView(withSpacing: CGFloat, withAlignment: Alignment) -> UIStackView {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
-        stackView.alignment = .fill
+        stackView.alignment = withAlignment
         stackView.spacing = withSpacing
         return stackView
     }
     
-    // MARK: - VerticalStackView for correct/incorrect Views
+    // MARK: - VerticalStackView for customViews
+  
 }

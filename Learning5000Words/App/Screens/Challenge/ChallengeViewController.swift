@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SnapKit
 
 final class ChallengeViewController: UIViewController {
     
@@ -15,16 +14,9 @@ final class ChallengeViewController: UIViewController {
         view.heightAnchor.constraint(equalToConstant: 250).isActive = true
         return view
     }()
-    private let stackViewSpacing: CGFloat = 10
-    
-//    private let challengeVertivalStackView: UIStackView = {
-//        let stackView = UIStackView()
-//        stackView.translatesAutoresizingMaskIntoConstraints = false
-//        stackView.axis = .vertical
-//        stackView.spacing = 10
-//        return stackView
-//    }()
 
+    private let verticalStackView = StackView.verticalStackView(withSpacing: 10)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
@@ -34,7 +26,7 @@ final class ChallengeViewController: UIViewController {
     
     private func setupViews() {
         view.backgroundColor = .white
-        view.addSubview(StackView.verticalStackView(withSpacing: stackViewSpacing))
+        view.addSubview(verticalStackView)
         
         var elements = [ProgressView.progressView, EmptyView.topEmptyView, Labels.headerLabel,
                         challengeView, EmptyView.lowerEmptyView
@@ -50,19 +42,19 @@ final class ChallengeViewController: UIViewController {
         elements.append(contentsOf: buttons)
         
         elements.forEach { item in
-            StackView.verticalStackView(withSpacing: stackViewSpacing).addArrangedSubview(item)
+            verticalStackView.addArrangedSubview(item)
         }
     }
     
     private func setupConstraints() {
         
-        StackView.verticalStackView(withSpacing: stackViewSpacing).snp.makeConstraints { make in
+        verticalStackView.snp.makeConstraints { make in
             make.top.equalTo(view).inset(60)
             make.left.right.equalTo(view).inset(40)
         }
 
         challengeView.snp.makeConstraints { make in
-            make.left.right.equalTo(StackView.verticalStackView(withSpacing: stackViewSpacing)).inset(25)
+            make.left.right.equalTo(verticalStackView).inset(25)
         }
     }
 }

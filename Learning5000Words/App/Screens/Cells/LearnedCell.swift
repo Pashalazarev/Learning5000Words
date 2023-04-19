@@ -12,7 +12,7 @@ final class LearnedCell: UITableViewCell {
     static let reuseId = "LearnedCell"
     
     lazy var wordImage = Image.wordImage()
-    lazy var verticalStackView = StackView.tableVerticalStackView(withSpacing: 5)
+    lazy var verticalStackView = StackView.customVerticalStackView(withSpacing: 5, withAlignment: .fill)
     
     private let wordLabelCell = Labels.wordLabelCell()
     private let translationLabelCell = Labels.translationLabelCell()

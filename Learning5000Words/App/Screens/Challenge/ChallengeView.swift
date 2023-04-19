@@ -5,20 +5,12 @@
 //  Created by Pavel Lazarev Macbook on 31.03.2023.
 //
 
-//import Foundation
 import UIKit
 
 final class ChallengeView: UIView {
-    private let stackViewSpacing: CGFloat = 10
-//
-//    private let verticalStackView: UIStackView = {
-//        let stackView = UIStackView()
-//        stackView.translatesAutoresizingMaskIntoConstraints = false
-//        stackView.axis = .vertical
-//        stackView.spacing = 10
-//
-//        return stackView
-//    }()
+
+    private let verticalStackView = StackView.verticalStackView(withSpacing: 10)
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -34,17 +26,17 @@ final class ChallengeView: UIView {
         self.backgroundColor = .systemTeal.withAlphaComponent(0.2)
         self.layer.cornerRadius = 20
 
-        self.addSubview(StackView.verticalStackView(withSpacing: stackViewSpacing))
+        self.addSubview(verticalStackView)
         self.addSubview(Button.clueButton)
         
         let elements = [ Button.soundButton, Labels.wordLabel, Labels.transcriptionLabel ]
         elements.forEach { elements in
-            StackView.verticalStackView(withSpacing: stackViewSpacing).addArrangedSubview(elements)
+            verticalStackView.addArrangedSubview(elements)
         }
     }
     
     private func setupConstraints() {
-        StackView.verticalStackView(withSpacing: stackViewSpacing).snp.makeConstraints { make in
+        verticalStackView.snp.makeConstraints { make in
             make.centerX.centerY.equalTo(self)
         }
         Button.clueButton.snp.makeConstraints { make in

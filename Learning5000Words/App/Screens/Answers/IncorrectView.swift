@@ -5,19 +5,19 @@
 //  Created by Pavel Lazarev Macbook on 10.04.2023.
 //
 import UIKit
-//import Foundation
 
 final class IncorectView: UIView {
     
-    private let verticalStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = .vertical
-        stackView.alignment = .center
-        stackView.spacing = 15
-        
-        return stackView
-    }()
+//    private let verticalStackView: UIStackView = {
+//        let stackView = UIStackView()
+//        stackView.translatesAutoresizingMaskIntoConstraints = false
+//        stackView.axis = .vertical
+//        stackView.alignment = .center
+//        stackView.spacing = 15
+//
+//        return stackView
+//    }()
+    private let verticalStackView = StackView.customVerticalStackView(withSpacing: 15, withAlignment: .center)
     
     private let wordImageView: UIImageView = {
          let image = UIImageView()

@@ -6,12 +6,11 @@
 //
 
 import UIKit
-import SnapKit
 
 final class WordsCell: UITableViewCell {
     
     static let reuseID = "WordsCell"
-    // MARK: - Creating elements
+    // MARK: - TODO сделать refactor для всех элементов
     
     private let containerView: UIView = {
         let view = UIView()
