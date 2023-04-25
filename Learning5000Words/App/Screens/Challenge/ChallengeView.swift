@@ -9,8 +9,9 @@ import UIKit
 
 final class ChallengeView: UIView {
 
-    private let verticalStackView = StackView.verticalStackView(withSpacing: 10)
-
+    private let verticalStackView = StackView(style: .forCustomViews)
+    var elements = [UIView]()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -29,7 +30,7 @@ final class ChallengeView: UIView {
         self.addSubview(verticalStackView)
         self.addSubview(Button.clueButton)
         
-        let elements = [ Button.soundButton, Labels.wordLabel, Labels.transcriptionLabel ]
+        self.elements = [ Button.soundButton, Labels.wordLabel, Labels.transcriptionLabel ]
         elements.forEach { elements in
             verticalStackView.addArrangedSubview(elements)
         }

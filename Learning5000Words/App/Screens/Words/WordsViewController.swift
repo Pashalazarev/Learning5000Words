@@ -10,7 +10,7 @@ import SnapKit
 
 final class WordsViewController: UIViewController {
     
-    var wordService = WordService()
+    var wordService = WordsService()
    
     lazy var tableView: UITableView = {
         var tableView = UITableView.init()
@@ -27,7 +27,8 @@ final class WordsViewController: UIViewController {
         setupViews()
         setupConstraints()
 
-        wordService.fetchWords()
+        wordService.loadWords()
+        
     }
     
 

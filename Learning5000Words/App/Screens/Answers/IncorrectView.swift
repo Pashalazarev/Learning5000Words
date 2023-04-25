@@ -8,27 +8,18 @@ import UIKit
 
 final class IncorectView: UIView {
     
-//    private let verticalStackView: UIStackView = {
-//        let stackView = UIStackView()
-//        stackView.translatesAutoresizingMaskIntoConstraints = false
-//        stackView.axis = .vertical
-//        stackView.alignment = .center
-//        stackView.spacing = 15
-//
-//        return stackView
-//    }()
-    private let verticalStackView = StackView.customVerticalStackView(withSpacing: 15, withAlignment: .center)
-    
     private let wordImageView: UIImageView = {
-         let image = UIImageView()
-         image.translatesAutoresizingMaskIntoConstraints = false
-         image.layer.shadowOpacity = 0
-         image.heightAnchor.constraint(equalToConstant: 150).isActive = true
-         image.widthAnchor.constraint(equalToConstant: 230).isActive = true
-         image.image = UIImage(named: "pic for answer")
-         
-         return image
-     }()
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.layer.shadowOpacity = 0
+        image.heightAnchor.constraint(equalToConstant: 150).isActive = true
+        image.widthAnchor.constraint(equalToConstant: 230).isActive = true
+        image.image = UIImage(named: "pic for answer")
+        
+        return image
+    }()
+    
+    private let verticalStackView = StackView(style: .forCustomViews)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -47,7 +38,7 @@ final class IncorectView: UIView {
         self.layer.shadowColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.5).cgColor
         self.layer.shadowOffset = CGSize(width: 0, height: 3)
         self.layer.shadowOpacity = 1
-
+        
         self.addSubview(verticalStackView)
         self.addSubview(Labels.descriptionLabel)
         

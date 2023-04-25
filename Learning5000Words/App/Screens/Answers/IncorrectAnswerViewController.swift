@@ -15,7 +15,7 @@ final class IncorrectAnswerViewController: UIViewController {
         return view
     }()
     
-    private let verticalStackView = StackView.verticalStackView(withSpacing: 10)
+    private let verticalStackView = StackView(style: .forCustomViews)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,15 +27,15 @@ final class IncorrectAnswerViewController: UIViewController {
         view.backgroundColor = .white
         view.addSubview(verticalStackView)
         view.addSubview(Button.nextStepButton)
-        
-        let elemets = [ProgressView.progressView,Labels.incorrectNotificationLabel,incorrectView]
+        view.addSubview(ProgressView.progressView)
+        let elemets = [Labels.incorrectNotificationLabel,incorrectView]
         
         elemets.forEach { element in
             verticalStackView.addArrangedSubview(element)
         }
     }
     private func setupConstraints() {
-
+        
         verticalStackView.snp.makeConstraints { make in
             make.top.equalTo(view).inset(90)
             make.left.right.equalTo(view).inset(20)
@@ -46,14 +46,15 @@ final class IncorrectAnswerViewController: UIViewController {
             make.top.equalTo(verticalStackView).inset(90)
             make.left.right.equalTo(verticalStackView)
         }
-
+        
         Button.nextStepButton.snp.makeConstraints { make in
             make.bottom.equalTo(incorrectView).inset(-90)
             make.left.right.equalTo(incorrectView)
         }
         
         ProgressView.progressView.snp.makeConstraints { make in
-            make.top.equalTo(verticalStackView).inset(20)
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).inset(20)
+            make.left.right.equalTo(view).inset(20)
         }
     }
 }

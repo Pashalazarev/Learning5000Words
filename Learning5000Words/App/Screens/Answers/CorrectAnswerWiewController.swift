@@ -14,7 +14,7 @@ final class CorrectAnswerWiewController: UIViewController {
         return view
     }()
     
-    private let verticalStackView = StackView.verticalStackView(withSpacing: 10)
+    private let verticalStackView = StackView(style: .forCustomViews)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +26,9 @@ final class CorrectAnswerWiewController: UIViewController {
         view.backgroundColor = .white
         view.addSubview(verticalStackView)
         view.addSubview(Button.nextStepButton)
+        view.addSubview(ProgressView.progressView) // ДОДЕЛАТЬ ПРОГРЕСС ВЬЮ!!
         
-        let elements = [ProgressView.progressView, Labels.correctNotificationLabel,correctView]
+        let elements = [Labels.correctNotificationLabel,correctView]
         
         elements.forEach { element in
             verticalStackView.addArrangedSubview(element)
@@ -35,7 +36,7 @@ final class CorrectAnswerWiewController: UIViewController {
     }
     
     private func setupConstraints() {
-
+        
         verticalStackView.snp.makeConstraints { make in
             make.top.equalTo(view).inset(90)
             make.left.right.equalTo(view).inset(20)
@@ -46,14 +47,15 @@ final class CorrectAnswerWiewController: UIViewController {
             make.top.equalTo(verticalStackView).inset(90)
             make.left.right.equalTo(verticalStackView)
         }
-
+        
         Button.nextStepButton.snp.makeConstraints { make in
             make.bottom.equalTo(correctView).inset(-90)
             make.left.right.equalTo(correctView)
         }
         
         ProgressView.progressView.snp.makeConstraints { make in
-            make.top.equalTo(verticalStackView).inset(20)
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).inset(20)
+            make.left.right.equalTo(view).inset(20)
         }
     }
 }

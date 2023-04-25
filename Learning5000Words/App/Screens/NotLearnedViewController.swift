@@ -9,7 +9,7 @@ import UIKit
 
 final class NotLearnedViewController: UIViewController {
     
-    private var wordService = WordService()
+    private var wordService = WordsService()
     
     lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -25,7 +25,7 @@ final class NotLearnedViewController: UIViewController {
         setupViews()
         setupConstraints()
         
-        wordService.fetchWords()
+        wordService.loadWords()
     }
     
     private func setupViews() {

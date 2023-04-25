@@ -9,7 +9,7 @@ import UIKit
 
 final class LearnedViewController: UIViewController {
     
-    var wordService = WordService() // ПОСМОТРЕТЬ ДЛЯ ЧЕГО ЭТО
+    var wordService = WordsService() // ПОСМОТРЕТЬ ДЛЯ ЧЕГО ЭТО
     
     lazy var tableView: UITableView = {
         let tableView = UITableView.init()
@@ -25,7 +25,7 @@ final class LearnedViewController: UIViewController {
         setupViews()
         setupConstraints()
         
-        wordService.fetchWords()
+        wordService.loadWords()
     }
     
     private func setupViews() {

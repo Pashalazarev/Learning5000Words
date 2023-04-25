@@ -91,8 +91,8 @@ final class WordsCell: UITableViewCell {
         }
     }
     
-    func update(_ word: Word) {
-        nameLabel.text = word.name
-        descriptionLabel.text = word.description
+    func update(_ word: WordModel) {
+        nameLabel.text = word.word
+        descriptionLabel.text = word.translate
     }
 }

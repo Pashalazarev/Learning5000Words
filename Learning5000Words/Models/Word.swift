@@ -7,13 +7,15 @@
 
 import Foundation
 
-//struct Word {
-//    let name: String
-//    let description: String
-//    let transcription: String
-//    let translation: String
-//}
-struct Word2: Codable {
+
+struct Word {
     let word: String
     let translate: String
+    let variants: [String]
+}
+
+struct WordModel: Codable { // вынести в отдеььный файл!
+    let id: Int
+    let word, translate: String
+    let order: Int
 }

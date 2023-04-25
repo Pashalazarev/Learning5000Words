@@ -12,7 +12,8 @@ final class LearnedCell: UITableViewCell {
     static let reuseId = "LearnedCell"
     
     lazy var wordImage = Image.wordImage()
-    lazy var verticalStackView = StackView.customVerticalStackView(withSpacing: 5, withAlignment: .fill)
+    
+    lazy var verticalStackView = StackView(style: .forCell)
     
     private let wordLabelCell = Labels.wordLabelCell()
     private let translationLabelCell = Labels.translationLabelCell()
@@ -49,8 +50,8 @@ final class LearnedCell: UITableViewCell {
         }
     }
     
-    func update(_ word: Word) {
-        wordLabelCell.text = word.name
-        translationLabelCell.text = word.translation
+    func update(_ word: WordModel) {
+        wordLabelCell.text = word.word
+        translationLabelCell.text = word.translate
     }
 }

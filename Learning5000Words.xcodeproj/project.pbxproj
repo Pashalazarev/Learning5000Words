@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA10BC1929F1A1A2009103E5 /* words5000.json in Resources */ = {isa = PBXBuildFile; fileRef = FA10BC1729F1A084009103E5 /* words5000.json */; };
 		FA187DDA29E46AB200D024E7 /* IncorrectAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA187DD929E46AB200D024E7 /* IncorrectAnswerViewController.swift */; };
 		FA187DDC29E46B4A00D024E7 /* IncorrectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA187DDB29E46B4A00D024E7 /* IncorrectView.swift */; };
 		FA187DDF29E58A9800D024E7 /* LearnedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA187DDE29E58A9800D024E7 /* LearnedViewController.swift */; };
@@ -35,6 +36,7 @@
 		FA8A163929DC565F00AEE462 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FA8A163829DC565F00AEE462 /* SnapKit */; };
 		FA8A164029DC963100AEE462 /* EmptyViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A163F29DC963100AEE462 /* EmptyViews.swift */; };
 		FAA207E829EED360006F3F7A /* WordImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA207E729EED360006F3F7A /* WordImage.swift */; };
+		FAD4C00F29F2BAD200B33A59 /* WordsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD4C00E29F2BAD200B33A59 /* WordsService.swift */; };
 		FAF3A13F29DEC40A007DE770 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF3A13E29DEC40A007DE770 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +54,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FA10BC1729F1A084009103E5 /* words5000.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words5000.json; sourceTree = "<group>"; };
 		FA187DD929E46AB200D024E7 /* IncorrectAnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncorrectAnswerViewController.swift; sourceTree = "<group>"; };
 		FA187DDB29E46B4A00D024E7 /* IncorrectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncorrectView.swift; sourceTree = "<group>"; };
 		FA187DDE29E58A9800D024E7 /* LearnedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnedViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +84,7 @@
 		FA8415A329D71BAC00F5FC39 /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
 		FA8A163F29DC963100AEE462 /* EmptyViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViews.swift; sourceTree = "<group>"; };
 		FAA207E729EED360006F3F7A /* WordImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordImage.swift; sourceTree = "<group>"; };
+		FAD4C00E29F2BAD200B33A59 /* WordsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsService.swift; sourceTree = "<group>"; };
 		FAF3A13E29DEC40A007DE770 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,7 +157,6 @@
 			isa = PBXGroup;
 			children = (
 				FA8415A529D71BD400F5FC39 /* App */,
-				FA78B0D829F020710089BBB0 /* NetworkService */,
 				FA7775E729E96219000D9B20 /* Models */,
 				FAF3A13D29DEC1BE007DE770 /* Components */,
 				FA84159729D7193F00F5FC39 /* Service */,
@@ -206,6 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				FA84159829D7197100F5FC39 /* WordsSettings.swift */,
+				FAD4C00E29F2BAD200B33A59 /* WordsService.swift */,
+				FA78B0D829F020710089BBB0 /* NetworkService */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -224,6 +229,7 @@
 		FA8415A629D71C1600F5FC39 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FA10BC1729F1A084009103E5 /* words5000.json */,
 				FA84158129D7175F00F5FC39 /* Main.storyboard */,
 				FA84158429D7176200F5FC39 /* Assets.xcassets */,
 				FA84158629D7176200F5FC39 /* LaunchScreen.storyboard */,
@@ -311,6 +317,7 @@
 			files = (
 				FA84158829D7176200F5FC39 /* LaunchScreen.storyboard in Resources */,
 				FA84158529D7176200F5FC39 /* Assets.xcassets in Resources */,
+				FA10BC1929F1A1A2009103E5 /* words5000.json in Resources */,
 				FA84158329D7175F00F5FC39 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +346,7 @@
 				FA84159429D718A600F5FC39 /* WordsViewController.swift in Sources */,
 				FA5E2DD729DAF29B0061817A /* CorrectAnswerWiewController.swift in Sources */,
 				FA8415A229D71B7E00F5FC39 /* Button.swift in Sources */,
+				FAD4C00F29F2BAD200B33A59 /* WordsService.swift in Sources */,
 				FAF3A13F29DEC40A007DE770 /* TabBarController.swift in Sources */,
 				FA84157E29D7175F00F5FC39 /* SceneDelegate.swift in Sources */,
 				FAA207E829EED360006F3F7A /* WordImage.swift in Sources */,
