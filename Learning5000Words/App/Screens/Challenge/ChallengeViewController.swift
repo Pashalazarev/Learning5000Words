@@ -10,8 +10,6 @@ import Foundation
 
 final class ChallengeViewController: UIViewController {
     
-    private var challengeRootView: ChallengeRootView {return self.view as! ChallengeRootView} //как сделать через as?
-    
     private let wordService = WordsService()
     
     private var currentWord: Word?
@@ -20,17 +18,13 @@ final class ChallengeViewController: UIViewController {
     
     private var elements: [UIView] = []
     
-    private let verticalStackView = StackView(style: .forView)
+    private let verticalStackView = StackView(style: .forChallengeVC)
     
     private let challengeView: ChallengeView = {
         let view = ChallengeView()
         view.heightAnchor.constraint(equalToConstant: 250).isActive = true
         return view
     }()
-    
-    override func loadView() {
-        self.view = ChallengeRootView(frame: UIScreen.main.bounds)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,9 +35,21 @@ final class ChallengeViewController: UIViewController {
         currentWord = wordService.next()
         
         update()
+        
+        clueButtonTapped()
     }
     
-    func update() {
+    private func clueButtonTapped() { // метод для clue button
+        Button.clueButton.addTarget(self, action: #selector(presentModallController), for: .touchUpInside)
+    }
+    
+    @objc func presentModallController() {
+        let vc = ClueViewController()
+        vc.modalPresentationStyle = .overCurrentContext
+        self.present(vc, animated: true)
+    }
+    
+   private func update() {
 
         if let label = elements[2] as? UILabel {
             label.text = currentWord?.word

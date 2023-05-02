@@ -46,4 +46,5 @@ final class ChallengeView: UIView {
             make.right.bottom.equalTo(self).inset(10)
         }
     }
+
 }

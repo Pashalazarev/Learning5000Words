@@ -11,8 +11,7 @@ final class LearnedCell: UITableViewCell {
     
     static let reuseId = "LearnedCell"
     
-    lazy var wordImage = Image.wordImage()
-    
+    lazy var wordImage = Image(style: .forTableView)
     lazy var verticalStackView = StackView(style: .forCell)
     
     private let wordLabelCell = Labels.wordLabelCell()

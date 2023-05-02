@@ -22,7 +22,7 @@ final class Labels: UILabel {
         switch style {
         case .correctAnswer:
             self.textColor = .black
-            self.text = "Парвильно!"
+            self.text = "Правильно!"
             self.textAlignment = .center
         case .incorrectAnswer:
             self.textColor = .black

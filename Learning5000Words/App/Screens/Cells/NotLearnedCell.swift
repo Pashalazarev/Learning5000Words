@@ -11,12 +11,12 @@ final class NotLearnedCell: UITableViewCell {
     
     static let reuseId = "NotLearnedCell"
     
+    lazy var wordImage = Image(style: .forTableView)
+    lazy var verticalStackView = StackView(style: .forCell)
+    
     private let wordLabelCell = Labels.wordLabelCell()
     private let translationLabelCell = Labels.translationLabelCell()
     
-    lazy var wordImage = Image.wordImage()
-//    lazy var verticalStackView = StackView.customVerticalStackView(withSpacing: 5, withAlignment: .fill)
-    lazy var verticalStackView = StackView(style: .forCell)
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

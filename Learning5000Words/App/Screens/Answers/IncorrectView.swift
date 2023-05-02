@@ -8,20 +8,10 @@ import UIKit
 
 final class IncorectView: UIView {
     
-    private let wordImageView: UIImageView = {
-        let image = UIImageView()
-        image.translatesAutoresizingMaskIntoConstraints = false
-        image.layer.shadowOpacity = 0
-        image.heightAnchor.constraint(equalToConstant: 150).isActive = true
-        image.widthAnchor.constraint(equalToConstant: 230).isActive = true
-        image.image = UIImage(named: "pic for answer")
-        
-        return image
-    }()
-    
     private let verticalStackView = StackView(style: .forView)
     private let transcriptionLabel = Labels(style: .transcriptionLabel)
     private let translationLabel = Labels(style: .translationLabel)
+    private let wordImage = Image(style: .forView)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,7 +25,7 @@ final class IncorectView: UIView {
     
     func setupViews() {
         self.layer.cornerRadius = 20
-        self.layer.borderWidth = 3 // рамка
+        self.layer.borderWidth = 3 
         self.layer.borderColor = UIColor.gray.withAlphaComponent(0.3).cgColor
         self.layer.shadowColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.5).cgColor
         self.layer.shadowOffset = CGSize(width: 0, height: 3)
@@ -44,7 +34,7 @@ final class IncorectView: UIView {
         self.addSubview(verticalStackView)
         self.addSubview(Labels.descriptionLabel)
         
-        let elements = [wordImageView, Button.soundButton, translationLabel,
+        let elements = [wordImage, Button.soundButton, translationLabel,
                         transcriptionLabel, Labels.wordLabel
         ]
         
@@ -62,5 +52,4 @@ final class IncorectView: UIView {
             make.left.right.bottom.equalTo(self).inset(10)
         }
     }
-    
 }
