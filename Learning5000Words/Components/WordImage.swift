@@ -33,13 +33,4 @@ final class Image: UIImageView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    static func wordImage() -> UIImageView {
-        let image = UIImageView()
-        image.translatesAutoresizingMaskIntoConstraints = false
-        image.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        image.widthAnchor.constraint(equalToConstant: 30).isActive = true
-        image.image = UIImage(named: "pic for answer")
-        return image
-    }
-
 }

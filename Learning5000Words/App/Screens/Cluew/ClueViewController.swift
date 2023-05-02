@@ -38,7 +38,6 @@ class ClueViewController: UIViewController {
         dimmedView.addGestureRecognizer(tapGesture)
     }
     
-    
     func setupViews() {
         view.addSubview(dimmedView)
         view.addSubview(clueView)
