@@ -28,7 +28,6 @@ final class WordsViewController: UIViewController {
         setupConstraints()
 
         wordService.loadWords()
-        
     }
     
 

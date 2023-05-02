@@ -15,7 +15,8 @@ final class IncorrectAnswerViewController: UIViewController {
         return view
     }()
     
-    private let verticalStackView = StackView(style: .forCustomViews)
+    private let verticalStackView = StackView(style: .forView)
+    private let incorrectNotificationLabel = Labels(style: .incorrectAnswer)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,7 @@ final class IncorrectAnswerViewController: UIViewController {
         view.addSubview(verticalStackView)
         view.addSubview(Button.nextStepButton)
         view.addSubview(ProgressView.progressView)
-        let elemets = [Labels.incorrectNotificationLabel,incorrectView]
+        let elemets = [incorrectNotificationLabel,incorrectView]
         
         elemets.forEach { element in
             verticalStackView.addArrangedSubview(element)

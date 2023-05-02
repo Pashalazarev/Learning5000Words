@@ -19,7 +19,9 @@ final class IncorectView: UIView {
         return image
     }()
     
-    private let verticalStackView = StackView(style: .forCustomViews)
+    private let verticalStackView = StackView(style: .forView)
+    private let transcriptionLabel = Labels(style: .transcriptionLabel)
+    private let translationLabel = Labels(style: .translationLabel)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -42,8 +44,8 @@ final class IncorectView: UIView {
         self.addSubview(verticalStackView)
         self.addSubview(Labels.descriptionLabel)
         
-        let elements = [wordImageView, Button.soundButton, Labels.translationLabel,
-                        Labels.transcriptionLabel, Labels.wordLabel
+        let elements = [wordImageView, Button.soundButton, translationLabel,
+                        transcriptionLabel, Labels.wordLabel
         ]
         
         elements.forEach { element in

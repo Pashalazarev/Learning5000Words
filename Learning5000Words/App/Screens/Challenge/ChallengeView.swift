@@ -9,7 +9,7 @@ import UIKit
 
 final class ChallengeView: UIView {
 
-    private let verticalStackView = StackView(style: .forCustomViews)
+    private let verticalStackView = StackView(style: .forView)
     var elements = [UIView]()
     
     override init(frame: CGRect) {
@@ -23,6 +23,8 @@ final class ChallengeView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    private let transcriptionLabel = Labels(style: .transcriptionLabel)
+    
     private func setupViews() {
         self.backgroundColor = .systemTeal.withAlphaComponent(0.2)
         self.layer.cornerRadius = 20
@@ -30,7 +32,7 @@ final class ChallengeView: UIView {
         self.addSubview(verticalStackView)
         self.addSubview(Button.clueButton)
         
-        self.elements = [ Button.soundButton, Labels.wordLabel, Labels.transcriptionLabel ]
+        self.elements = [ Button.soundButton, Labels.wordLabel, transcriptionLabel]
         elements.forEach { elements in
             verticalStackView.addArrangedSubview(elements)
         }

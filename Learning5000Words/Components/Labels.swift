@@ -7,11 +7,49 @@
 
 import UIKit
 
-class Labels: UILabel {
+enum HeaderLabelStyle {
+    case correctAnswer
+    case incorrectAnswer
+    case translationLabel
+    case transcriptionLabel
+}
+
+final class Labels: UILabel {
+    
+    init (style: HeaderLabelStyle) {
+        super.init(frame: .zero)
+        
+        switch style {
+        case .correctAnswer:
+            self.textColor = .black
+            self.text = "Парвильно!"
+            self.textAlignment = .center
+        case .incorrectAnswer:
+            self.textColor = .black
+            self.text = "Не правильный ответ. Необходимо повторить!"
+            self.textAlignment = .center
+            self.numberOfLines = 2
+        case .translationLabel:
+            self.textColor = .black
+            self.font = UIFont.boldSystemFont(ofSize: 25)
+            self.text = "Тут будет перевод слова"
+        case .transcriptionLabel:
+            self.textColor = .gray.withAlphaComponent(0.3)
+            self.textAlignment = .center
+            self.font = UIFont.boldSystemFont(ofSize: 20)
+            self.text = "[ˈprɪti]"
+        }
+        
+        self.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
 // MARK: - Common Labels
     
-    static let wordLabel: UILabel = {
+    static let wordLabel: UILabel = { // этот тоже в enum
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
@@ -27,14 +65,6 @@ class Labels: UILabel {
         label.numberOfLines = 2
         label.text = "Тут будет подробное описание слова которое надо описать"
        return label
-    }()
-    
-   static let translationLabel: UILabel = {
-       let label = UILabel()
-        label.textColor = .black
-        label.font = UIFont.boldSystemFont(ofSize: 25)
-        label.text = "Перевод слова"
-        return label
     }()
     
 //MARK: - Labels for Custom Cells
@@ -55,8 +85,6 @@ class Labels: UILabel {
         return label
     }
     
-    
-    
 // MARK: - Labels for CorrectAnswer VC
     
     static let headerLabel: UILabel = {
@@ -75,26 +103,5 @@ class Labels: UILabel {
         label.text = "[ˈprɪti]"
         label.textAlignment = .center
         return label
-    }()
-    
-    static let correctNotificationLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .black
-        label.text = "Правильно!"
-        label.textAlignment = .center
-        return label
-    }()
-    
-// MARK: - Labels for IncorrectAnswer VC
-    
-    static let incorrectNotificationLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .black
-        label.text = "Не правильный ответ. Необходимо повторить"
-        label.textAlignment = .center
-        label.numberOfLines = 2
-       return label
     }()
 }

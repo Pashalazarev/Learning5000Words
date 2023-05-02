@@ -14,7 +14,8 @@ final class CorrectAnswerWiewController: UIViewController {
         return view
     }()
     
-    private let verticalStackView = StackView(style: .forCustomViews)
+    private let verticalStackView = StackView(style: .forView)
+    private let correctNotificationLabel = Labels(style: .correctAnswer)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +27,9 @@ final class CorrectAnswerWiewController: UIViewController {
         view.backgroundColor = .white
         view.addSubview(verticalStackView)
         view.addSubview(Button.nextStepButton)
-        view.addSubview(ProgressView.progressView) // ДОДЕЛАТЬ ПРОГРЕСС ВЬЮ!!
+        view.addSubview(ProgressView.progressView)
         
-        let elements = [Labels.correctNotificationLabel,correctView]
+        let elements = [correctNotificationLabel,correctView]
         
         elements.forEach { element in
             verticalStackView.addArrangedSubview(element)

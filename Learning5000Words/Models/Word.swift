@@ -8,13 +8,13 @@
 import Foundation
 
 
-struct Word {
+struct Word { // это модель для отображения на экране ChallengeVC
     let word: String
     let translate: String
     let variants: [String]
 }
 
-struct WordModel: Codable { // вынести в отдеььный файл!
+struct WordModel: Codable { // вынести в отдеььный файл!  это модель которую парсим
     let id: Int
     let word, translate: String
     let order: Int

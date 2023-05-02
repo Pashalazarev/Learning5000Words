@@ -42,7 +42,6 @@ final class Button: UIButton {
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         button.layer.cornerRadius = 15
         button.heightAnchor.constraint(equalToConstant: 53).isActive = true
-        button.setTitle("Вариант 1", for: .normal)
         return button
     }
     
