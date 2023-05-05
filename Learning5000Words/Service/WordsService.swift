@@ -7,7 +7,7 @@
 
 import Foundation
 
-class WordsService {
+final class WordsService {
     
     var words = [WordModel]() // тут сохраняем слова
 

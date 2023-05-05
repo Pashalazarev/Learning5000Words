@@ -69,7 +69,7 @@ final class Labels: UILabel {
     
 //MARK: - Labels for Custom Cells
 
-    static func wordLabelCell() -> UILabel { // общее свойство для learnedcell и notLearnedCell  почему именно метод надо создавать?
+    static func wordLabelCell() -> UILabel {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 13)
@@ -77,7 +77,7 @@ final class Labels: UILabel {
         return label
     }
     
-    static func translationLabelCell() -> UILabel { // общее свойство для learnedcell и notLearnedCell  почему именно метод надо создавать?
+    static func translationLabelCell() -> UILabel { 
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 13)

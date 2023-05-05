@@ -10,6 +10,12 @@ import Foundation
 
 final class ChallengeViewController: UIViewController {
     
+    // MARK: - проверка для WordsArchiver
+    let wordArchiver = WordsArchiver()
+    let wordsToSave = [Word(word: "Hello", translate: "Привет", variants: ["Досвидание", "Добрый день"]), Word(word: "Index", translate: "Индекс", variants: ["Массив", "Жопа"])]
+    
+    
+    
     private let wordService = WordsService()
     
     private var currentWord: Word?
@@ -37,6 +43,10 @@ final class ChallengeViewController: UIViewController {
         update()
         
         clueButtonTapped()
+        
+        wordArchiver.save(wordsToSave)
+        verifyWordsArchiver()
+        
     }
     
     private func clueButtonTapped() { // метод для clue button
@@ -51,11 +61,11 @@ final class ChallengeViewController: UIViewController {
     
    private func update() {
 
-        if let label = elements[2] as? UILabel {
+        if let label = elements[1] as? UILabel {
             label.text = currentWord?.word
         }
 
-        if let view = elements[3] as? ChallengeView {
+        if let view = elements[2] as? ChallengeView {
             if let label = view.elements[1] as? UILabel {
                 label.text = currentWord?.word
             }
@@ -93,8 +103,9 @@ final class ChallengeViewController: UIViewController {
         ]
         
         var buttons = [UIButton]()
-        for index in 1...4 {
+        for index in 0...3 {
             let button = Button.createAnswerButton()
+            button.tag = index
             button.addTarget(self, action: #selector(variantButtonTapped(sender:)), for: .touchUpInside) // addtarget для кнопки
             button.setTitle("Variant \(index)", for: .normal)
             buttons.append(button)
@@ -107,10 +118,20 @@ final class ChallengeViewController: UIViewController {
         }
     }
     
-    @objc func variantButtonTapped(sender: UIButton) { // тут пишет то что будет сделано когда нажимается кнопка
+    @objc func variantButtonTapped(sender: UIButton) { // что будет происходить при нажатии на кнопку
+        
+        let index = sender.tag
+        
+        if currentWord?.variants[index] == currentWord?.translate {
+            sender.backgroundColor = UIColor(displayP3Red: 0.0, green: 0.6, blue: 0.0, alpha: 0.7)
+        } else {
+            sender.backgroundColor = .red
+        }
+        
         currentWord = wordService.next()
         
         update()
+        UIView.animate(withDuration: 0.5, delay: 0.7, options: .curveEaseInOut, animations: {sender.backgroundColor = .white.withAlphaComponent(0.5)}, completion: nil) // анимация при нажатии на кнопку + задержка в возвращении цвета на оригинальный
     }
     
     private func setupConstraints() {
@@ -127,6 +148,15 @@ final class ChallengeViewController: UIViewController {
         ProgressView.progressView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top).inset(20)
             make.left.right.equalTo(view).inset(20)
+        }
+    }
+    
+    func verifyWordsArchiver() {
+        let saveWords = wordArchiver.fetchWords()
+        if saveWords == wordsToSave {
+            print("Архиватор работает")
+        } else {
+            print("Массивы не совпадают")
         }
     }
 }

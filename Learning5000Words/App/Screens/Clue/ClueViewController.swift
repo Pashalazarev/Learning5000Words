@@ -19,7 +19,6 @@ class ClueViewController: UIViewController {
         view.backgroundColor = .white
         view.heightAnchor.constraint(equalToConstant: 400).isActive = true
         view.layer.cornerRadius = 16
-        view.clipsToBounds = true
         return view
     }()
     

@@ -40,6 +40,11 @@ final class WordsViewController: UIViewController {
             make.top.left.right.bottom.equalTo(view)
         }
     }
+    
+    func showChallengeScreen() {
+        let challengeVC = ChallengeViewController()
+        navigationController?.pushViewController(challengeVC, animated: true)
+    }
 }
 
 extension WordsViewController: UITableViewDelegate, UITableViewDataSource {
@@ -59,5 +64,8 @@ extension WordsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        showChallengeScreen()
+        
     }
 }

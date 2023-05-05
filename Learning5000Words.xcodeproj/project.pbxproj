@@ -17,6 +17,7 @@
 		FA5E2DD429DAED0A0061817A /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E2DD329DAED0A0061817A /* ProgressView.swift */; };
 		FA5E2DD729DAF29B0061817A /* CorrectAnswerWiewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E2DD629DAF29B0061817A /* CorrectAnswerWiewController.swift */; };
 		FA5E2DD929DAF49B0061817A /* CorrectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E2DD829DAF49B0061817A /* CorrectView.swift */; };
+		FA6CFA352A053FEF0033B0FE /* WordsArchiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6CFA342A053FEF0033B0FE /* WordsArchiver.swift */; };
 		FA7775E929E96236000D9B20 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7775E829E96236000D9B20 /* Word.swift */; };
 		FA789A0329E889990020C86E /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA789A0229E889990020C86E /* StackView.swift */; };
 		FA78B0DA29F023B30089BBB0 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA78B0D929F023B30089BBB0 /* NetworkService.swift */; };
@@ -28,7 +29,6 @@
 		FA84158829D7176200F5FC39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA84158629D7176200F5FC39 /* LaunchScreen.storyboard */; };
 		FA84159429D718A600F5FC39 /* WordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84159329D718A600F5FC39 /* WordsViewController.swift */; };
 		FA84159629D718E200F5FC39 /* WordsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84159529D718E200F5FC39 /* WordsCell.swift */; };
-		FA84159929D7197100F5FC39 /* WordsSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84159829D7197100F5FC39 /* WordsSettings.swift */; };
 		FA84159E29D71B1C00F5FC39 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84159D29D71B1C00F5FC39 /* ChallengeViewController.swift */; };
 		FA8415A029D71B3B00F5FC39 /* ChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84159F29D71B3B00F5FC39 /* ChallengeView.swift */; };
 		FA8415A229D71B7E00F5FC39 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8415A129D71B7E00F5FC39 /* Button.swift */; };
@@ -65,6 +65,7 @@
 		FA5E2DD329DAED0A0061817A /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		FA5E2DD629DAF29B0061817A /* CorrectAnswerWiewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectAnswerWiewController.swift; sourceTree = "<group>"; };
 		FA5E2DD829DAF49B0061817A /* CorrectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectView.swift; sourceTree = "<group>"; };
+		FA6CFA342A053FEF0033B0FE /* WordsArchiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsArchiver.swift; sourceTree = "<group>"; };
 		FA7775E829E96236000D9B20 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		FA789A0229E889990020C86E /* StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
 		FA78B0D929F023B30089BBB0 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -78,7 +79,6 @@
 		FA84158929D7176200F5FC39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA84159329D718A600F5FC39 /* WordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsViewController.swift; sourceTree = "<group>"; };
 		FA84159529D718E200F5FC39 /* WordsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsCell.swift; sourceTree = "<group>"; };
-		FA84159829D7197100F5FC39 /* WordsSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsSettings.swift; sourceTree = "<group>"; };
 		FA84159D29D71B1C00F5FC39 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
 		FA84159F29D71B3B00F5FC39 /* ChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeView.swift; sourceTree = "<group>"; };
 		FA8415A129D71B7E00F5FC39 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
@@ -133,6 +133,7 @@
 		FA78B0D829F020710089BBB0 /* NetworkService */ = {
 			isa = PBXGroup;
 			children = (
+				FA6CFA342A053FEF0033B0FE /* WordsArchiver.swift */,
 				FA78B0D929F023B30089BBB0 /* NetworkService.swift */,
 				FA78B0DD29F053750089BBB0 /* JsonLoader.swift */,
 			);
@@ -176,7 +177,7 @@
 				FA84159229D7186000F5FC39 /* Challenge */,
 				FA5E2DD529DAF2270061817A /* Answers */,
 				FA187DDD29E5884100D024E7 /* WordList */,
-				FA8F76AD2A01265000FDF73E /* Cluew */,
+				FA8F76AD2A01265000FDF73E /* Clue */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -211,7 +212,6 @@
 		FA84159729D7193F00F5FC39 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				FA84159829D7197100F5FC39 /* WordsSettings.swift */,
 				FAD4C00E29F2BAD200B33A59 /* WordsService.swift */,
 				FA78B0D829F020710089BBB0 /* NetworkService */,
 			);
@@ -240,12 +240,12 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		FA8F76AD2A01265000FDF73E /* Cluew */ = {
+		FA8F76AD2A01265000FDF73E /* Clue */ = {
 			isa = PBXGroup;
 			children = (
 				FA8F76AB2A0125BD00FDF73E /* ClueViewController.swift */,
 			);
-			path = Cluew;
+			path = Clue;
 			sourceTree = "<group>";
 		};
 		FAF3A13D29DEC1BE007DE770 /* Components */ = {
@@ -341,8 +341,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA187DE129E58ADD00D024E7 /* NotLearnedViewController.swift in Sources */,
-				FA84159929D7197100F5FC39 /* WordsSettings.swift in Sources */,
 				FA84157C29D7175F00F5FC39 /* AppDelegate.swift in Sources */,
+				FA6CFA352A053FEF0033B0FE /* WordsArchiver.swift in Sources */,
 				FA187DDC29E46B4A00D024E7 /* IncorrectView.swift in Sources */,
 				FA187DE529E5980200D024E7 /* LearnedCell.swift in Sources */,
 				FA8A164029DC963100AEE462 /* EmptyViews.swift in Sources */,
