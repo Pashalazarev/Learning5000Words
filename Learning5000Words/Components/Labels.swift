@@ -8,8 +8,8 @@
 import UIKit
 
 enum HeaderLabelStyle {
-    case correctAnswer
-    case incorrectAnswer
+    case headerCorrectAnswer
+    case headerIncorrectAnswer
     case translationLabel
     case transcriptionLabel
 }
@@ -20,11 +20,11 @@ final class Labels: UILabel {
         super.init(frame: .zero)
         
         switch style {
-        case .correctAnswer:
+        case .headerCorrectAnswer:
             self.textColor = .black
             self.text = "Правильно!"
             self.textAlignment = .center
-        case .incorrectAnswer:
+        case .headerIncorrectAnswer:
             self.textColor = .black
             self.text = "Не правильный ответ. Необходимо повторить!"
             self.textAlignment = .center

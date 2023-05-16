@@ -77,15 +77,13 @@ final class TabBarController: UITabBarController {
     private func setup() {
         tabBar.tintColor = .green
         viewControllers = [UINavigationController.init(rootViewController: wordsVC) , challengeVC, correctAnswerVC, learnedVC, notLearnedVC]
+        
     }
     
     private func showChallengeVC() { // назвать иначе метод
         let navigationController = UINavigationController()
-        
         let rootVC = WordsViewController()
-        
         let challengeVC = ChallengeViewController()
-        
         navigationController.setViewControllers([rootVC, challengeVC], animated: true)
     }
 }

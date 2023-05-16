@@ -41,7 +41,7 @@ final class WordsViewController: UIViewController {
         }
     }
     
-    func showChallengeScreen() {
+    func showChallengeScreen() { // переход на challengeVC при нажатии на ячейку
         let challengeVC = ChallengeViewController()
         navigationController?.pushViewController(challengeVC, animated: true)
     }

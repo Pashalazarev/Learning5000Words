@@ -15,7 +15,7 @@ final class CorrectAnswerWiewController: UIViewController {
     }()
     
     private let verticalStackView = StackView(style: .forView)
-    private let correctNotificationLabel = Labels(style: .correctAnswer)
+    private let correctNotificationLabel = Labels(style: .headerCorrectAnswer)
     
     override func viewDidLoad() {
         super.viewDidLoad()
