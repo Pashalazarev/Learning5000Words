@@ -7,51 +7,49 @@
 
 import UIKit
 
+enum ButtonStyle {
+    case sound
+    case clue
+    case answer
+}
 final class Button: UIButton {
-
-    // MARK: - Common buttons
     
-    static let soundButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage.init(systemName: "speaker.wave.2.fill"), for: .normal)
-        button.tintColor = .black
-        return button
-    }()
-    
-    static let nextStepButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = .systemBlue
-        button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 20)
-        button.layer.cornerRadius = 15
-        button.heightAnchor.constraint(equalToConstant: 53).isActive = true
-        button.setTitle("Далее", for: .normal)
-        return button
-    }()
-    // MARK: - Buttons for CorrectAnswer VC
-    
-    static func createAnswerButton() -> UIButton {
-        let button = UIButton(type: .system)
-        button.backgroundColor = .white.withAlphaComponent(0.5)
-        button.layer.shadowColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.3).cgColor
-        button.layer.shadowOffset = CGSize(width: 0, height: 3)
-        button.layer.shadowOpacity = 1
-        button.setTitleColor(.black, for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
-        button.layer.cornerRadius = 15
-        button.heightAnchor.constraint(equalToConstant: 53).isActive = true
-        return button
+    init(type: ButtonStyle, text: String) {
+        super.init(frame: .zero)
+        
+        switch type {
+        case .sound:
+            configureSoundButton()
+        case .clue:
+            configureClueButton()
+        case .answer:
+            configureAnswerButton(text: text)
+        }
     }
     
-    static let clueButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage.init(systemName: "lightbulb"), for: .normal)
-        return button
-    }()
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
-    // MARK: - Buttons for IncorrectAnswer VC
-
+    func configureSoundButton() {
+        self.setImage(UIImage(systemName: "speaker.wave.2.fill"), for: .normal)
+        
+    }
+    
+    func configureClueButton() {
+        self.setImage(UIImage(systemName: "hint"), for: .normal)
+        
+    }
+    
+    func configureAnswerButton(text: String) {
+        self.setTitle(text, for: .normal)
+        self.backgroundColor = .systemGray
+        self.layer.cornerRadius = 16
+        self.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        self.widthAnchor.constraint(equalToConstant: 250).isActive = true
+        self.clipsToBounds = true
+        
+    }
+    
+    
 }

@@ -16,7 +16,7 @@ final class IncorrectAnswerViewController: UIViewController {
     }()
     
     private let verticalStackView = StackView(style: .forView)
-    private let incorrectNotificationLabel = Labels(style: .headerIncorrectAnswer)
+    private let incorrectNotificationLabel = Label(style: .headerIncorrectAnswer)
     
     override func viewDidLoad() {
         super.viewDidLoad()

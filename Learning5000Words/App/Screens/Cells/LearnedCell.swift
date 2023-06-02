@@ -11,11 +11,11 @@ final class LearnedCell: UITableViewCell {
     
     static let reuseId = "LearnedCell"
     
-    lazy var wordImage = Image(style: .forTableView)
+    lazy var wordImage = Image(style: .tableViewImage)
     lazy var verticalStackView = StackView(style: .forCell)
     
-    private let wordLabelCell = Labels.wordLabelCell()
-    private let translationLabelCell = Labels.translationLabelCell()
+    private let wordLabelCell = Label.wordLabelCell()
+    private let translationLabelCell = Label.translationLabelCell()
     
 // MARK: - какой тут марк?
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

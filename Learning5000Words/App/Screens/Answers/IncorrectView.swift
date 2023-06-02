@@ -9,9 +9,9 @@ import UIKit
 final class IncorectView: UIView {
     
     private let verticalStackView = StackView(style: .forView)
-    private let transcriptionLabel = Labels(style: .transcriptionLabel)
-    private let translationLabel = Labels(style: .translationLabel)
-    private let wordImage = Image(style: .forView)
+    private let transcriptionLabel = Label(style: .transcriptionLabel)
+    private let translationLabel = Label(style: .translationLabel)
+    private let wordImage = Image(style: .viewImage)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -32,10 +32,10 @@ final class IncorectView: UIView {
         self.layer.shadowOpacity = 1
         
         self.addSubview(verticalStackView)
-        self.addSubview(Labels.descriptionLabel)
+        self.addSubview(Label.descriptionLabel)
         
         let elements = [wordImage, Button.soundButton, translationLabel,
-                        transcriptionLabel, Labels.wordLabel
+                        transcriptionLabel, Label.wordLabel
         ]
         
         elements.forEach { element in
@@ -48,7 +48,7 @@ final class IncorectView: UIView {
             make.left.right.equalTo(self).inset(40)
             make.top.equalTo(self).inset(40)
         }
-        Labels.descriptionLabel.snp.makeConstraints { make in
+        Label.descriptionLabel.snp.makeConstraints { make in
             make.left.right.bottom.equalTo(self).inset(10)
         }
     }

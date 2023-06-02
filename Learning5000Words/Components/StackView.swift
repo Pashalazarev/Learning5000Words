@@ -29,7 +29,6 @@ final class StackView: UIStackView {
             self.spacing = 15
         case .forChallengeVC:
             self.axis = .vertical
-            self.alignment = .fill
             self.spacing = 15
         }
         self.translatesAutoresizingMaskIntoConstraints = false

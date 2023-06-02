@@ -11,7 +11,7 @@ import UIKit
 class ClueViewController: UIViewController {
 
     private let verticalStacKView = StackView(style: .forView)
-    private let wordImage = Image(style: .forView)
+    private let wordImage = Image(style: .viewImage)
     
     private let clueView: UIView = {
         let view = UIView()
@@ -41,12 +41,12 @@ class ClueViewController: UIViewController {
         view.addSubview(dimmedView)
         view.addSubview(clueView)
         verticalStacKView.addArrangedSubview(wordImage)
-        verticalStacKView.addArrangedSubview(Labels.descriptionLabel)
+        verticalStacKView.addArrangedSubview(Label.descriptionLabel)
         clueView.addSubview(verticalStacKView)
     }
     
     func setupConstraints() {
-        Labels.descriptionLabel.snp.makeConstraints { make in
+        Label.descriptionLabel.snp.makeConstraints { make in
             make.right.left.top.bottom.equalTo(clueView).inset(20)
         }
         clueView.snp.makeConstraints { make in

@@ -19,8 +19,8 @@ final class TabBarController: UITabBarController {
         return controller
     }()
     
-    private let challengeVC: ChallengeViewController = {
-        let controller = ChallengeViewController()
+    private let challengeVC: NewChallengeViewController = {
+        let controller = NewChallengeViewController()
         let image = UIImage(systemName: "questionmark.circle")
         let selectedImage = UIImage(systemName: "questionmark.circle.fill")
         let tabItem = UITabBarItem.init(title: "Варианты ответа", image: image, selectedImage: selectedImage)

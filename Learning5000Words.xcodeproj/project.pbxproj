@@ -29,16 +29,16 @@
 		FA84158829D7176200F5FC39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA84158629D7176200F5FC39 /* LaunchScreen.storyboard */; };
 		FA84159429D718A600F5FC39 /* WordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84159329D718A600F5FC39 /* WordsViewController.swift */; };
 		FA84159629D718E200F5FC39 /* WordsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84159529D718E200F5FC39 /* WordsCell.swift */; };
-		FA84159E29D71B1C00F5FC39 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84159D29D71B1C00F5FC39 /* ChallengeViewController.swift */; };
-		FA8415A029D71B3B00F5FC39 /* ChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA84159F29D71B3B00F5FC39 /* ChallengeView.swift */; };
 		FA8415A229D71B7E00F5FC39 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8415A129D71B7E00F5FC39 /* Button.swift */; };
-		FA8415A429D71BAC00F5FC39 /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8415A329D71BAC00F5FC39 /* Labels.swift */; };
+		FA8415A429D71BAC00F5FC39 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8415A329D71BAC00F5FC39 /* Label.swift */; };
 		FA8A163929DC565F00AEE462 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FA8A163829DC565F00AEE462 /* SnapKit */; };
-		FA8A164029DC963100AEE462 /* EmptyViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A163F29DC963100AEE462 /* EmptyViews.swift */; };
+		FA8A164029DC963100AEE462 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8A163F29DC963100AEE462 /* EmptyView.swift */; };
 		FA8F76AC2A0125BD00FDF73E /* ClueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F76AB2A0125BD00FDF73E /* ClueViewController.swift */; };
 		FAA207E829EED360006F3F7A /* WordImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA207E729EED360006F3F7A /* WordImage.swift */; };
+		FAB9B6F32A26011100336CE2 /* WordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB9B6F22A26011100336CE2 /* WordView.swift */; };
 		FAD4C00F29F2BAD200B33A59 /* WordsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD4C00E29F2BAD200B33A59 /* WordsService.swift */; };
 		FAF3A13F29DEC40A007DE770 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF3A13E29DEC40A007DE770 /* TabBarController.swift */; };
+		FAF3C9082A2A176300F37724 /* ChallengeScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF3C9072A2A176300F37724 /* ChallengeScreenVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -79,15 +79,15 @@
 		FA84158929D7176200F5FC39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA84159329D718A600F5FC39 /* WordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsViewController.swift; sourceTree = "<group>"; };
 		FA84159529D718E200F5FC39 /* WordsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsCell.swift; sourceTree = "<group>"; };
-		FA84159D29D71B1C00F5FC39 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
-		FA84159F29D71B3B00F5FC39 /* ChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeView.swift; sourceTree = "<group>"; };
 		FA8415A129D71B7E00F5FC39 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
-		FA8415A329D71BAC00F5FC39 /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
-		FA8A163F29DC963100AEE462 /* EmptyViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViews.swift; sourceTree = "<group>"; };
+		FA8415A329D71BAC00F5FC39 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		FA8A163F29DC963100AEE462 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		FA8F76AB2A0125BD00FDF73E /* ClueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClueViewController.swift; sourceTree = "<group>"; };
 		FAA207E729EED360006F3F7A /* WordImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordImage.swift; sourceTree = "<group>"; };
+		FAB9B6F22A26011100336CE2 /* WordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordView.swift; sourceTree = "<group>"; };
 		FAD4C00E29F2BAD200B33A59 /* WordsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsService.swift; sourceTree = "<group>"; };
 		FAF3A13E29DEC40A007DE770 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		FAF3C9072A2A176300F37724 /* ChallengeScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeScreenVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,8 +203,8 @@
 		FA84159229D7186000F5FC39 /* Challenge */ = {
 			isa = PBXGroup;
 			children = (
-				FA84159D29D71B1C00F5FC39 /* ChallengeViewController.swift */,
-				FA84159F29D71B3B00F5FC39 /* ChallengeView.swift */,
+				FAF3C9072A2A176300F37724 /* ChallengeScreenVC.swift */,
+				FAB9B6F22A26011100336CE2 /* WordView.swift */,
 			);
 			path = Challenge;
 			sourceTree = "<group>";
@@ -252,9 +252,9 @@
 			isa = PBXGroup;
 			children = (
 				FA8415A129D71B7E00F5FC39 /* Button.swift */,
-				FA8415A329D71BAC00F5FC39 /* Labels.swift */,
+				FA8415A329D71BAC00F5FC39 /* Label.swift */,
 				FA5E2DD329DAED0A0061817A /* ProgressView.swift */,
-				FA8A163F29DC963100AEE462 /* EmptyViews.swift */,
+				FA8A163F29DC963100AEE462 /* EmptyView.swift */,
 				FA789A0229E889990020C86E /* StackView.swift */,
 				FAA207E729EED360006F3F7A /* WordImage.swift */,
 			);
@@ -341,20 +341,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA187DE129E58ADD00D024E7 /* NotLearnedViewController.swift in Sources */,
+				FAB9B6F32A26011100336CE2 /* WordView.swift in Sources */,
 				FA84157C29D7175F00F5FC39 /* AppDelegate.swift in Sources */,
 				FA6CFA352A053FEF0033B0FE /* WordsArchiver.swift in Sources */,
 				FA187DDC29E46B4A00D024E7 /* IncorrectView.swift in Sources */,
 				FA187DE529E5980200D024E7 /* LearnedCell.swift in Sources */,
-				FA8A164029DC963100AEE462 /* EmptyViews.swift in Sources */,
+				FA8A164029DC963100AEE462 /* EmptyView.swift in Sources */,
 				FA84159629D718E200F5FC39 /* WordsCell.swift in Sources */,
-				FA8415A029D71B3B00F5FC39 /* ChallengeView.swift in Sources */,
 				FA789A0329E889990020C86E /* StackView.swift in Sources */,
-				FA84159E29D71B1C00F5FC39 /* ChallengeViewController.swift in Sources */,
+				FAF3C9082A2A176300F37724 /* ChallengeScreenVC.swift in Sources */,
 				FA78B0DA29F023B30089BBB0 /* NetworkService.swift in Sources */,
 				FA8F76AC2A0125BD00FDF73E /* ClueViewController.swift in Sources */,
 				FA5E2DD929DAF49B0061817A /* CorrectView.swift in Sources */,
 				FA7775E929E96236000D9B20 /* Word.swift in Sources */,
-				FA8415A429D71BAC00F5FC39 /* Labels.swift in Sources */,
+				FA8415A429D71BAC00F5FC39 /* Label.swift in Sources */,
 				FA84159429D718A600F5FC39 /* WordsViewController.swift in Sources */,
 				FA5E2DD729DAF29B0061817A /* CorrectAnswerWiewController.swift in Sources */,
 				FA8415A229D71B7E00F5FC39 /* Button.swift in Sources */,
